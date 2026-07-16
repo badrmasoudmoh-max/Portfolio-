@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Badr Mohamed</title>
+    <meta name="description" content="Design gallery of Badr Mohamed — Social Media Campaigns, Brand Identity, and Print Design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"><span class="cursor-label" id="cursor-label"></span></div>
+
+    <!-- Navigation -->
+    <header class="header glass-panel-nav scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Badr<span class="gradient-text">.</span></a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-arrow-left" style="margin-right:.4rem"></i> Back to Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="gallery-main">
+        <!-- Gallery Header -->
+        <div class="gallery-header">
+            <h1 class="gallery-title">Selected <span class="gradient-text">Work</span></h1>
+            <p class="gallery-desc">A curated collection of social media campaigns, brand identities, and print designs.</p>
+            <!-- Filter -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bstudy">B-Study</button>
+                <button class="filter-btn" data-filter="mawhiba">Mawhiba+</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+            </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="bento-grid" id="bento-grid">
+            <!-- B-Study -->
+            <div class="bento-item bento-wide reveal" data-group="bstudy" data-index="0" data-category="Social Media Campaign" data-title="B-Study — Open Registration" id="bstudy">
+                <img src="images/bstudy1.jpg" alt="B-Study Design 1" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Social Media</span><span class="bento-title">B-Study</span></div>
+            </div>
+            <div class="bento-item bento-tall reveal" data-group="bstudy" data-index="1" data-category="Social Media Campaign" data-title="B-Study — Engagement Post">
+                <img src="images/bstudy2.jpg" alt="B-Study Design 2" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Social Media</span><span class="bento-title">B-Study</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="bstudy" data-index="2" data-category="Campaign" data-title="B-Study — Visual Identity">
+                <img src="images/bstudy3.jpg" alt="B-Study Design 3" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Campaign</span><span class="bento-title">B-Study</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="bstudy" data-index="3" data-category="Campaign" data-title="B-Study — Ready for Round 3">
+                <img src="images/bstudy4.jpg" alt="B-Study Design 4" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Campaign</span><span class="bento-title">B-Study</span></div>
+            </div>
+            <!-- Mawhiba+ -->
+            <div class="bento-item bento-tall reveal" data-group="mawhiba" data-index="4" data-category="Brand Identity" data-title="Mawhiba+ — Key Visual" id="mawhiba">
+                <img src="images/smart1.jpg" alt="Mawhiba+ Design 1" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Brand Identity</span><span class="bento-title">Mawhiba+</span></div>
+            </div>
+            <div class="bento-item bento-wide reveal" data-group="mawhiba" data-index="5" data-category="Brand Identity" data-title="Mawhiba+ — Tiny Hands, Big Dreams">
+                <img src="images/smart2.jpg" alt="Mawhiba+ Design 2" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Brand Identity</span><span class="bento-title">Mawhiba+</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="mawhiba" data-index="6" data-category="Education" data-title="Mawhiba+ — Learning Made Fun">
+                <img src="images/smart3.jpg" alt="Mawhiba+ Design 3" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Education</span><span class="bento-title">Mawhiba+</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="mawhiba" data-index="7" data-category="Education" data-title="Mawhiba+ — Every Small Step">
+                <img src="images/smart4.jpg" alt="Mawhiba+ Design 4" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Education</span><span class="bento-title">Mawhiba+</span></div>
+            </div>
+            <!-- Training -->
+            <div class="bento-item bento-wide reveal" data-group="training" data-index="8" data-category="Print & Promo" data-title="Training Courses — Cover" id="training">
+                <img src="images/training1.jpg" alt="Training Design 1" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Print</span><span class="bento-title">Training Courses</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="training" data-index="9" data-category="Print & Promo" data-title="Training Courses — Brochure">
+                <img src="images/training2.jpg" alt="Training Design 2" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Print</span><span class="bento-title">Training Courses</span></div>
+            </div>
+            <div class="bento-item reveal" data-group="training" data-index="10" data-category="Promo" data-title="Training Courses — Layout">
+                <img src="images/training3.jpg" alt="Training Design 3" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Promo</span><span class="bento-title">Training Courses</span></div>
+            </div>
+            <div class="bento-item bento-tall reveal" data-group="training" data-index="11" data-category="Promo" data-title="Training Courses — Feature Spread">
+                <img src="images/training4.jpg" alt="Training Design 4" loading="lazy">
+                <div class="bento-overlay"><span class="bento-cat">Promo</span><span class="bento-title">Training Courses</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top:4rem">
+        <div class="footer-bottom"><p>&copy; 2025 Badr Mohamed. No templates were harmed.</p></div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-container" id="lightbox-container">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="" draggable="false">
+        </div>
+        <div class="lightbox-info"><span class="lightbox-cat" id="lightbox-cat"></span><span class="lightbox-title" id="lightbox-title"></span><span class="lightbox-counter" id="lightbox-counter"></span></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
