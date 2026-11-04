@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Layout, type and component primitives for Controlled Chaos.
+   ========================================================================== */
+
+/* ---- Layout ---- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: var(--col-gap);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+/* ---- Type ---- */
+.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  text-transform: uppercase;
+}
+
+.display--mega {
+  font-size: var(--fs-mega);
+}
+
+.display .accent,
+.accent-line {
+  display: inline-block;
+  color: var(--accent);
+  transform: skewX(var(--skew-accent));
+  transform-origin: left bottom;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-display);
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h3);
+  font-weight: 750;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  max-width: 38ch;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--highlight);
+}
+
+.section-index {
+  font-family: var(--font-display);
+  color: var(--highlight);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  --btn-shadow: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  min-height: 48px;                       /* touch target */
+  padding: 0.75rem 1.5rem;
+  border: var(--border) solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 var(--btn-shadow);
+  transition:
+    transform var(--dur-2) var(--ease-out),
+    box-shadow var(--dur-2) var(--ease-out),
+    background-color var(--dur-1) linear,
+    color var(--dur-1) linear;
+}
+
+.btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  --btn-shadow: var(--lime);
+}
+
+.btn--ghost {
+  border-color: var(--cream);
+  color: var(--cream);
+  --btn-shadow: var(--orange);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-hard) var(--btn-shadow);
+  }
+
+  .btn:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+.btn:active {
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 0 var(--btn-shadow);
+}
+
+/* ---- Status pill ("Available for creative projects") ---- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.status-pill::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 4px rgb(216 255 69 / 0.18);
+  flex: none;
+}
+
+/* ==========================================================================
+   Chaos primitives: shapes, textures, stickers. All code-generated (CSS/SVG);
+   no raster placeholders.
+   ========================================================================== */
+.layer {
+  position: absolute;
+  pointer-events: none;
+}
+
+.shape-circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.shape-slab {
+  background: var(--olive);
+  transform: rotate(var(--tilt-md));
+}
+
+.shape-slab--grain {
+  background-color: var(--olive);
+  background-image: var(--grain);
+  background-blend-mode: soft-light;
+}
+
+/* Torn-paper edge (top + bottom) via a zig-zag clip path */
+.torn {
+  clip-path: polygon(
+    0% 4%, 6% 1%, 12% 5%, 19% 0%, 26% 4%, 33% 1%, 41% 5%, 48% 0%, 56% 4%, 63% 1%,
+    71% 5%, 78% 0%, 86% 4%, 93% 1%, 100% 4%,
+    100% 96%, 94% 100%, 87% 95%, 80% 99%, 72% 95%, 65% 100%, 57% 96%, 50% 100%,
+    42% 95%, 35% 99%, 27% 95%, 20% 100%, 12% 96%, 6% 100%, 0% 96%
+  );
+}
+
+.sticker {
+  display: inline-block;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1;
+  transform: rotate(var(--tilt-sm));
+  box-shadow: var(--shadow-hard) rgb(0 0 0 / 0.35);
+}
+
+.swatch-strip {
+  display: grid;
+  gap: 6px;
+  padding: 6px;
+  background: var(--cream);
+  transform: rotate(var(--tilt-sm));
+}
+
+.swatch-strip > span {
+  display: block;
+  width: 44px;
+  height: 36px;
+}
+
+/* Brush underline (inline SVG path, stroke = currentColor) */
+.brush-underline {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--orange);
+}
+
+/* Film-grain overlay. Put on a positioned container. */
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-sticker);
+  background-image: var(--grain);
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Grid-line texture used behind hero */
+.grid-lines {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

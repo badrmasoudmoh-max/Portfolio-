@@ -1,0 +1,5 @@
+/* Self-hosted fonts (bundled by Vite, no third-party requests).
+   Anton: single weight (400) display face, used uppercase for headings.
+   Inter Variable: 100–900 weight axis for UI and body copy. */
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource-variable/inter/wght.css';

@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const bentoItems = document.querySelectorAll('.bento-item');
 
+    // Lightbox state. Declared before the initial filter/updateImagesArray()
+    // call below; declaring it later threw a TDZ ReferenceError that stopped
+    // the lightbox from ever being wired up.
+    let images = [];
+    let currentIdx = 0;
+
     function filterGallery(filterValue) {
         // Update active button
         filterBtns.forEach(btn => {
@@ -62,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lbTitle = document.getElementById('lightbox-title');
     const lbCounter = document.getElementById('lightbox-counter');
 
-    let images = [];
-    let currentIdx = 0;
-    
     // Update the images array to only include currently visible items
     function updateImagesArray() {
         images = [];
