@@ -12,11 +12,11 @@ for (const [path, url] of Object.entries(webps)) {
   if (!fullSize[name] || Number(w) > fullSize[name].w) fullSize[name] = { w: Number(w), url };
 }
 
-const GROUPS = ['bstudy', 'mawhiba', 'training'];
-
 export function initGallery() {
   const tiles = [...document.querySelectorAll('.tile')];
   const filters = [...document.querySelectorAll('.filter')];
+  // Valid deep-link groups come from the generated filter buttons (#ads, #bstudy, …)
+  const GROUPS = filters.map((b) => b.dataset.filter).filter((g) => g !== 'all');
   const status = document.getElementById('filter-status');
   const dialog = document.getElementById('lightbox');
   if (!tiles.length || !dialog) return;
@@ -37,7 +37,8 @@ export function initGallery() {
     tiles.forEach((t) => { t.hidden = !(value === 'all' || t.dataset.group === value); });
     visible = tiles.filter((t) => !t.hidden);
     if (announce && status) {
-      const label = filters.find((b) => b.dataset.filter === value)?.textContent.trim() ?? value;
+      const btn = filters.find((b) => b.dataset.filter === value);
+      const label = btn ? btn.childNodes[0].textContent.trim() : value;
       status.textContent = `Showing ${visible.length} ${value === 'all' ? 'designs' : `${label} designs`}`;
     }
   };

@@ -62,7 +62,8 @@ The previous site is also preserved in git history at commit `2303b65`.
 
 ## Maintenance notes
 
-- New project images: put originals in `images/` (characters in `images/characters/`), run `npm run images`, reference the generated files in `src/assets/img/`.
+- New project / Behance work: copy originals to `images/work/<key>/`, add the project to `tools/gallery-data.json`, then run `npm run images` and `npm run gallery` (regenerates the gallery tiles, filters and the home featured cards).
+- Characters: originals in `images/characters/`, then `npm run images`.
 - Social card / favicon: edit `tools/og.html` / `tools/icon.html`, run `npm run dev`, then `node tools/render-og.mjs`.
 - Dev-only pages (not deployed): `styleguide.html`, `tools/*.html`.
 - Unused after launch (kept until removal is approved): `css/style.css`, `css/gallery.css`, `js/script.js`, `js/gallery.js`.

@@ -116,9 +116,17 @@ function sectionReveals() {
   ScrollTrigger.batch(items, {
     start: 'top 90%',
     once: true,
-    onEnter: (batch) => gsap.to(batch, {
-      y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.07, overwrite: true,
-    }),
+    onEnter: (batch) => {
+      // A long jump (nav link, Home/End) enters many items at once. Show the ones
+      // already above the viewport instantly; stagger only what is on screen,
+      // with a capped total so nothing waits in a long queue.
+      const onScreen = batch.filter((el) => el.getBoundingClientRect().bottom > 0);
+      gsap.set(batch.filter((el) => !onScreen.includes(el)), { y: 0, autoAlpha: 1, overwrite: true });
+      gsap.to(onScreen, {
+        y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', overwrite: true,
+        stagger: { each: 0.07, amount: Math.min(0.5, onScreen.length * 0.07) },
+      });
+    },
   });
 
   // Characters pop in from below their sections

@@ -574,10 +574,23 @@ html:not(.js) .copy-btn {
 }
 
 .contact__char {
+  position: relative;
+  isolation: isolate;
   display: block;
-  width: min(78%, 400px);
-  margin-top: var(--sp-6);
+  width: min(70%, 380px);
+  margin-top: var(--sp-7);
   margin-bottom: calc(var(--section-y) * -1);
+}
+
+/* Ink arch behind him: the orange jacket would vanish on the orange section */
+.contact__char::before {
+  content: '';
+  position: absolute;
+  inset: 14% 2% 0;
+  z-index: -1;
+  border-radius: 999px 999px 0 0;
+  background: var(--ink) var(--grain);
+  background-blend-mode: soft-light;
 }
 
 .contact__char img {

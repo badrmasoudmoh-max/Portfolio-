@@ -33,7 +33,7 @@
 
 .work__char img {
   width: 100%;
-  max-height: 440px;
+  max-height: 520px;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0 18px 24px rgb(0 0 0 / 0.4));
@@ -88,8 +88,10 @@
   list-style: none;
 }
 
-.work-card:nth-child(2) {
+/* Chaos rule: the middle column drops */
+.work-card:nth-child(3n + 2) {
   margin-top: var(--offset-lg);
+  margin-bottom: calc(var(--offset-lg) * -1);
 }
 
 .work-card__link {
@@ -107,8 +109,17 @@
   display: block;
   overflow: hidden;
   border-radius: calc(var(--radius-md) - 4px);
-  aspect-ratio: 1;
+  aspect-ratio: 808 / 632; /* Behance project covers */
   background: var(--ink-3);
+}
+
+.work-card__num {
+  grid-column: 1 / -1;
+  margin-bottom: var(--sp-2);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--orange);
 }
 
 .work-card__media img {
@@ -151,7 +162,7 @@
 
 .work-card__arrow {
   grid-column: 2;
-  grid-row: 1 / 4;
+  grid-row: 2 / 5;
   align-self: start;
   width: 40px;
   height: 40px;
@@ -215,8 +226,8 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .work-card:nth-child(2) {
-    margin-top: 0;
+  .work-card:nth-child(3n + 2) {
+    margin: 0;
   }
 }
 
@@ -225,11 +236,4 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .work-card:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
-  .work-card:nth-child(3) .work-card__media {
-    aspect-ratio: 16 / 9;
-  }
 }
