@@ -960,6 +960,186 @@
       "jpg"
     ]
   },
+  "w-sgrc-01": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-02": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-03": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-04": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-05": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-06": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-07": {
+    "width": 1092,
+    "height": 1440,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-08": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-09": {
+    "width": 1400,
+    "height": 1979,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-10": {
+    "width": 1400,
+    "height": 1979,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-11": {
+    "width": 1400,
+    "height": 990,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "w-sgrc-12": {
+    "width": 1400,
+    "height": 990,
+    "alpha": false,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
   "w-tech-01": {
     "width": 1400,
     "height": 1400,
