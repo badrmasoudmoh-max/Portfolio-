@@ -59,20 +59,22 @@ function heroIntro() {
   gsap.set('.hero__character', { xPercent: -50, x: 0 });
 
   document.fonts.ready.then(() => {
-    const split = SplitText.create('.hero__line', { type: 'chars', mask: 'chars' });
+    // h1 carries the accessible name; split spans are hidden from AT
+    // (aria-label on a plain span is not allowed).
+    const split = SplitText.create('.hero__line', { type: 'chars', mask: 'chars', aria: 'hidden' });
     const tl = gsap.timeline({
       defaults: { ease: 'power4.out' },
       onStart: () => root.classList.add('motion-done'),
     });
 
-    tl.set(['.hero__head', '.hero__body', '.hero__stage'], { autoAlpha: 1 })
+    // The character (LCP image) is never hidden; shapes and type animate around it.
+    tl.set(['.hero__head', '.hero__body', '.hero__layer'], { autoAlpha: 1 })
       .from(split.chars, { yPercent: 110, duration: 0.9, stagger: 0.022 })
       .from('.hero__head .eyebrow', { y: 16, autoAlpha: 0, duration: 0.6 }, 0.1)
       .fromTo('.hero__underline svg path', { strokeDasharray: 420, strokeDashoffset: 420 }, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0.7)
       .from('.hero__circle', { scale: 0.4, autoAlpha: 0, duration: 1.1, ease: 'expo.out' }, 0.15)
       .from('.hero__slab', { rotate: -18, xPercent: -12, autoAlpha: 0, duration: 1.1, ease: 'expo.out' }, 0.2)
       .from('.hero__box', { yPercent: 60, autoAlpha: 0, duration: 0.9 }, 0.3)
-      .from('.hero__character', { y: 60, autoAlpha: 0, duration: 1.1, ease: 'expo.out' }, 0.35)
       .from(['.hero__sticker', '.hero__swatches', '.hero__asterisk', '.hero__stamp', '.hero__note'], {
         scale: 0.6, rotate: (i) => (i % 2 ? 14 : -14), autoAlpha: 0, duration: 0.7, stagger: 0.07, ease: 'back.out(2)',
       }, 0.7)

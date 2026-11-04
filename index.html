@@ -1,491 +1,473 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badr Mohamed Masoud | Graphic Designer &amp; Social Media Designer</title>
-    <meta name="description" content="Portfolio of Badr Mohamed Masoud, a creative Graphic Designer and Social Media Designer specializing in visual campaigns and branding.">
-    
-    <!-- Fonts: Inter & Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badr Masoud — Graphic &amp; Social Media Designer</title>
+  <meta name="description" content="Badr Masoud (Badr Mohamed Masoud) — graphic & social media designer crafting bold visuals, social campaigns, and creative identities.">
+  <link rel="canonical" href="https://badrmasoudmoh-max.github.io/Portfolio-/">
+  <meta name="theme-color" content="#151613">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Badr Masoud">
+  <meta property="og:title" content="Badr Masoud — I make visual noise. That matters.">
+  <meta property="og:description" content="Graphic & social media designer crafting bold visuals, social campaigns, and creative identities.">
+  <meta property="og:url" content="https://badrmasoudmoh-max.github.io/Portfolio-/">
+  <meta property="og:image" content="https://badrmasoudmoh-max.github.io/Portfolio-/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Badr Masoud portfolio — I make visual noise. That matters.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Badr Masoud",
+    "alternateName": "Badr Mohamed Masoud",
+    "jobTitle": "Graphic & Social Media Designer",
+    "url": "https://badrmasoudmoh-max.github.io/Portfolio-/",
+    "image": "https://badrmasoudmoh-max.github.io/Portfolio-/og-image.jpg",
+    "email": "mailto:badr.masoud.moh@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "EG" },
+    "knowsAbout": ["Graphic design", "Social media design", "Branding", "Advertising creatives", "Print and digital layouts"],
+    "sameAs": [
+      "https://www.linkedin.com/in/badr-mohamed-8b1558330/",
+      "https://www.behance.net/badrmohamed52",
+      "https://www.instagram.com/badr_mohamed_masoud/"
+    ]
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/src/styles/home.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loader">
-        <div class="loader-text">
-            <span>B</span><span>a</span><span>d</span><span>r</span><span class="loader-dot">.</span>
-        </div>
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top" aria-label="Badr Masoud — home">BADR<span aria-hidden="true">*</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="status-pill site-nav__status">Available for<br>creative projects</p>
+      </nav>
     </div>
+  </header>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"><span class="cursor-label" id="cursor-label"></span></div>
+  <main id="main">
+    <!-- ===================== Hero ===================== -->
+    <section id="top" class="hero grain" aria-labelledby="hero-title">
+      <div class="container hero__inner">
 
-    <!-- Scroll Progress -->
-    <div id="scroll-progress" class="progress-bar"></div>
-
-    <!-- Background Animated Glow -->
-    <div class="bg-glow blob-1"></div>
-    <div class="bg-glow blob-2"></div>
-
-    <!-- Navigation -->
-    <header class="header glass-panel-nav">
-        <div class="container nav-container">
-            <a href="#hero" class="logo">Badr<span class="gradient-text">.</span></a>
-            
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Portfolio</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="mobile-toggle icon-btn" aria-label="Toggle Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+        <div class="hero__head">
+          <p class="eyebrow">Independent graphic designer / Egypt</p>
+          <h1 id="hero-title" class="hero__title" aria-label="I make visual noise. That matters.">
+            <span class="hero__line">I make</span>
+            <span class="hero__line accent">Visual noise.</span>
+            <span class="hero__line"><span class="hero__underline">That matters.<svg viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 15 C 70 7, 150 5, 230 10 S 350 17, 394 9" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span></span>
+          </h1>
         </div>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <p class="hero-subtitle hero-word">Hello, I am</p>
-                    <h1 class="hero-title hero-word">Badr Mohamed Masoud</h1>
-                    <h2 class="hero-tagline hero-word">Graphic Designer <span class="gradient-text">&amp; Social Media Designer</span></h2>
-                    <p class="hero-desc reveal js-delay-1">
-                        A passionate creative professional with a proven track record. I transform ideas into visually engaging, high-converting digital experiences driven by strategic design.
-                    </p>
-                    <div class="hero-btns reveal js-delay-2">
-                        <a href="#projects" class="btn btn-primary magnetic-btn">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary magnetic-btn">Let's Connect</a>
-                    </div>
-                </div>
-                <div class="hero-visual reveal js-delay-1">
-                    <div class="hero-image-wrapper glass-panel">
-                        <img src="images/profile.jpg" alt="Badr Mohamed" class="profile-img-hero">
-                    </div>
-                </div>
-            </div>
-            <!-- Scroll Cue -->
-            <div id="scroll-indicator" class="scroll-cue">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
+        <div class="hero__stage">
+          <div class="hero__layer hero__slab" aria-hidden="true"></div>
+          <div class="hero__layer hero__circle" aria-hidden="true"></div>
+          <div class="hero__layer hero__box" aria-hidden="true"></div>
 
-        <!-- About Section -->
-        <section id="about" class="about section bg-variant">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>About Me</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="about-grid grid-2">
-                    <div class="about-visual reveal">
-                        <div class="profile-card glass-panel">
-                            <img src="images/profile.jpg" alt="Badr Mohamed - Creative Designer" class="profile-img-about">
-                            <h3 class="profile-name">Badr Mohamed Masoud</h3>
-                            <p class="profile-role">Graphic &amp; Social Media Designer</p>
-                            <div class="profile-socials">
-                                <a href="https://www.linkedin.com/in/badr-mohamed-8b1558330/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://wa.me/201286204412" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://www.behance.net/badrmohamed52" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                                <a href="https://www.instagram.com/badr_mohamed_masoud/?hl=ar" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-text reveal js-delay-1">
-                        <p class="highlight-text">
-                            I am a results-driven Graphic Designer with 1–2 years of experience creating high-impact social media designs, digital campaigns, and visual content.
-                        </p>
-                        <p>
-                            I specialize in translating unique brand identities into engaging, on-brand visuals across sectors like education, food &amp; beverage, real estate, and retail. By combining strong design fundamentals with proven leadership and communication skills, I deliver strategic assets that drive engagement and growth.
-                        </p>
-                        <!-- Objective -->
-                        <div class="objective-box glass-panel mt-4">
-                            <h4><i class="fas fa-bullseye gradient-text"></i> Career Objective</h4>
-                            <p>To continuously evolve as a high-impact creative designer, delivering transformative visual solutions that empower brands to stand out, deeply engage their audiences, and achieve measurable, strategic success.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <picture class="hero__character">
+            <source type="image/avif" srcset="src/assets/img/hero-sitting-480.avif 480w, src/assets/img/hero-sitting-800.avif 800w, src/assets/img/hero-sitting-1086.avif 1086w" sizes="(min-width: 900px) 38vw, 80vw">
+            <source type="image/webp" srcset="src/assets/img/hero-sitting-480.webp 480w, src/assets/img/hero-sitting-800.webp 800w, src/assets/img/hero-sitting-1086.webp 1086w" sizes="(min-width: 900px) 38vw, 80vw">
+            <img src="src/assets/img/hero-sitting-800.png" width="1086" height="1448" alt="Illustrated portrait of Badr Masoud in an orange jacket, sitting with a stylus pen" fetchpriority="high" decoding="async">
+          </picture>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Core Skills &amp; Tools</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                <div class="skills-grid grid-3">
-                    <div class="skill-card glass-panel reveal">
-                        <div class="skill-icon"><i class="fas fa-swatchbook"></i></div>
-                        <h3>Design Software</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check-circle"></i> Adobe Photoshop</li>
-                            <li><i class="fas fa-check-circle"></i> Adobe Illustrator</li>
-                            <li><i class="fas fa-check-circle"></i> Canva</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card glass-panel reveal js-delay-1">
-                        <div class="skill-icon"><i class="fas fa-share-nodes"></i></div>
-                        <h3>Social Media Design</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check-circle"></i> Post Design</li>
-                            <li><i class="fas fa-check-circle"></i> Content Calendars</li>
-                            <li><i class="fas fa-check-circle"></i> Campaign Visuals</li>
-                            <li><i class="fas fa-check-circle"></i> Ad Creatives</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card glass-panel reveal js-delay-2">
-                        <div class="skill-icon"><i class="fas fa-bezier-curve"></i></div>
-                        <h3>Brand &amp; Layout</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check-circle"></i> Branding Materials</li>
-                            <li><i class="fas fa-check-circle"></i> Promotional Brochures</li>
-                            <li><i class="fas fa-check-circle"></i> Print &amp; Digital Layouts</li>
-                            <li><i class="fas fa-check-circle"></i> Sector-specific Visuals</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <p class="hero__layer hero__note" aria-hidden="true">Good design<br>good mood</p>
+          <svg class="hero__layer hero__asterisk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3v34M5 11.5l30 17M5 28.5l30-17" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+          <div class="hero__layer hero__sticker" aria-hidden="true"><span class="sticker">Ideas<br>design<br>impact</span></div>
+          <div class="hero__layer hero__swatches swatch-strip" aria-hidden="true"><span style="background: var(--orange)"></span><span style="background: var(--olive)"></span><span style="background: var(--ink)"></span><span style="background: var(--lime)"></span></div>
+          <p class="hero__layer hero__stamp" aria-hidden="true">Controlled<br>chaos</p>
+        </div>
 
-        <!-- Projects Section (Behance Showcase) -->
-        <section id="projects" class="projects section bg-variant">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Creative Portfolio</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                <div class="portfolio-showcase reveal">
-                    <div class="behance-card glass-panel">
-                        <div class="behance-icon-large">
-                            <i class="fab fa-behance"></i>
-                        </div>
-                        <h3>Explore My Work On Behance</h3>
-                        <p>
-                            I regularly document my social media campaigns, brand identities, ad creatives, and promotional designs on my Behance portfolio. Discover my latest high-fidelity visual projects.
-                        </p>
-                        <a href="https://www.behance.net/badrmohamed52" target="_blank" class="btn btn-behance magnetic-btn">
-                            Visit Behance Portfolio <i class="fas fa-arrow-up-right-from-square ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience section">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Experience</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-panel">
-                            <span class="timeline-date">May 2026 &mdash; Present</span>
-                            <h3>Graphic Designer (Part-time)</h3>
-                            <span class="timeline-company">INNERWIN Academy</span>
-                            <ul class="timeline-list">
-                                <li>Design social media posts, ad creatives, and promotional materials for marketing campaigns.</li>
-                                <li>Collaborate with the marketing team to maintain consistent visual branding across all platforms.</li>
-                                <li>Deliver design assets on tight turnarounds alongside a full-time academic role.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-panel">
-                            <span class="timeline-date">Aug 2025 &mdash; May 2026</span>
-                            <h3>Graphic Designer (Full-time)</h3>
-                            <span class="timeline-company">Continuing Education Academy &mdash; Sharjah</span>
-                            <ul class="timeline-list">
-                                <li>Produced a full range of social media and marketing visuals for course promotions, events, and academic programs.</li>
-                                <li>Designed digital and print materials aligned with the academy's brand guidelines.</li>
-                                <li>Worked directly with academic coordinators to translate program content into engaging visual communications.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-panel">
-                            <span class="timeline-date">Jun 2025 &mdash; Dec 2025</span>
-                            <h3>Graphic Designer (Freelance)</h3>
-                            <span class="timeline-company">B-Little Hands</span>
-                            <ul class="timeline-list">
-                                <li>Created social media design content tailored to a children/education-focused brand identity.</li>
-                                <li>Delivered a consistent visual style across multiple platforms as an independent contractor.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-panel">
-                            <span class="timeline-date">May 2025 &mdash; Dec 2025</span>
-                            <h3>Graphic Designer (Freelance)</h3>
-                            <span class="timeline-company">B-Study</span>
-                            <ul class="timeline-list">
-                                <li>Designed educational social media content and promotional creatives for course offerings.</li>
-                                <li>Managed design projects independently from concept to final delivery for an external client.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="certifications section bg-variant">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Certifications &amp; Trainings</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                <div class="certs-grid">
-                    <!-- Cert 1 -->
-                    <div class="cert-card glass-panel reveal">
-                        <div class="cert-badge"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">Ministry of Communications &amp; IT, Egypt</span>
-                            <h3>Digital Arts &mdash; Graphics Designer</h3>
-                            <p class="cert-date">Digital Egypt Pioneers Program | Jun &mdash; Dec 2025</p>
-                        </div>
-                    </div>
-                    <!-- Cert 2 -->
-                    <div class="cert-card glass-panel reveal js-delay-1">
-                        <div class="cert-badge"><i class="fas fa-medal"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">Ministry of Communications &amp; IT, Egypt</span>
-                            <h3>Team Leader Recognition</h3>
-                            <p class="cert-date">Digital Egypt Pioneers Program | Jun &mdash; Dec 2025</p>
-                        </div>
-                    </div>
-                    <!-- Cert 3 -->
-                    <div class="cert-card glass-panel reveal">
-                        <div class="cert-badge"><i class="fas fa-award"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">Aspire Institute</span>
-                            <h3>Aspire Leaders Program (40 hours)</h3>
-                            <p class="cert-date">Jul 2026</p>
-                        </div>
-                    </div>
-                    <!-- Cert 4 -->
-                    <div class="cert-card glass-panel reveal js-delay-1">
-                        <div class="cert-badge"><i class="fas fa-chart-line"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">McKinsey.org</span>
-                            <h3>Forward Program</h3>
-                            <p class="cert-date">Jun 2026</p>
-                        </div>
-                    </div>
-                    <!-- Cert 5 -->
-                    <div class="cert-card glass-panel reveal">
-                        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">Codeavour Egypt / ARTPARK / AWS</span>
-                            <h3>Certificate of Appreciation &mdash; Event Organization</h3>
-                            <p class="cert-date">Codeavour 6.0 AI, Programming &amp; Robotics Competition | Feb 2025</p>
-                        </div>
-                    </div>
-                    <!-- Cert 6 -->
-                    <div class="cert-card glass-panel reveal js-delay-1">
-                        <div class="cert-badge"><i class="fas fa-users"></i></div>
-                        <div class="cert-info">
-                            <span class="cert-org">Directorate of Youth &amp; Sports, Alexandria</span>
-                            <h3>Member, Social Media Committee (Season 4)</h3>
-                            <p class="cert-date">2024 &mdash; 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services section bg-variant">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Professional Services</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="services-grid grid-3">
-                    <div class="service-card glass-panel reveal">
-                        <i class="fas fa-share-nodes service-icon"></i>
-                        <h3>Social Media Design</h3>
-                        <p>High-converting posts, stories, and campaign graphics.</p>
-                    </div>
-                    <div class="service-card glass-panel reveal js-delay-1">
-                        <i class="fas fa-bullhorn service-icon"></i>
-                        <h3>Advertising Creatives</h3>
-                        <p>Eye-catching ad creatives meant to drive clicks and sales.</p>
-                    </div>
-                    <div class="service-card glass-panel reveal js-delay-2">
-                        <i class="fas fa-bezier-curve service-icon"></i>
-                        <h3>Branding &amp; Logos</h3>
-                        <p>Memorable logos and compelling visual identities.</p>
-                    </div>
-                    <div class="service-card glass-panel reveal">
-                        <i class="fas fa-file-pdf service-icon"></i>
-                        <h3>Course Brochures</h3>
-                        <p>Structured, readable promotional materials for education.</p>
-                    </div>
-                    <div class="service-card glass-panel reveal js-delay-1">
-                        <i class="fas fa-rocket service-icon"></i>
-                        <h3>Campaign Design</h3>
-                        <p>Holistic visual design for end-to-end promotional campaigns.</p>
-                    </div>
-                    <div class="service-card glass-panel reveal js-delay-2">
-                        <i class="fas fa-layer-group service-icon"></i>
-                        <h3>Print &amp; Digital Layouts</h3>
-                        <p>Polished layout designs for print materials, PDFs, and corporate reports.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Process Section -->
-        <section id="process" class="process section">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Work Process</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                <div class="process-steps flex-center gap-4 wrap">
-                    <div class="process-step reveal">
-                        <div class="step-circle glass-panel">01</div>
-                        <h4>Discovery</h4>
-                        <p>Understanding requirements</p>
-                    </div>
-                    <div class="process-connector hide-mobile reveal"></div>
-                    <div class="process-step reveal js-delay-1">
-                        <div class="step-circle glass-panel">02</div>
-                        <h4>Research</h4>
-                        <p>Analyzing trends &amp; competition</p>
-                    </div>
-                    <div class="process-connector hide-mobile reveal"></div>
-                    <div class="process-step reveal js-delay-2">
-                        <div class="step-circle glass-panel">03</div>
-                        <h4>Concepts</h4>
-                        <p>Creating initial designs</p>
-                    </div>
-                    <div class="process-connector hide-mobile reveal"></div>
-                    <div class="process-step reveal js-delay-1">
-                        <div class="step-circle glass-panel">04</div>
-                        <h4>Refinement</h4>
-                        <p>Iterating on client feedback</p>
-                    </div>
-                    <div class="process-connector hide-mobile reveal"></div>
-                    <div class="process-step reveal">
-                        <div class="step-circle glass-panel">05</div>
-                        <h4>Delivery</h4>
-                        <p>Final polished assets</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section bg-variant">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Get In Touch</h2>
-                    <div class="line mx-auto"></div>
-                </div>
-                <div class="contact-grid grid-2">
-                    <div class="contact-info glass-panel reveal">
-                        <h3>Let's start a project together</h3>
-                        <p>Feel free to reach out for collaborations or just a friendly hello.</p>
-                        
-                        <div class="contact-links mt-4">
-                            <a href="tel:+201286204412" class="contact-link">
-                                <span class="icon-circle"><i class="fas fa-phone"></i></span>
-                                <span>+20 128 620 4412</span>
-                            </a>
-                            <a href="#" id="email-copy-link" data-email="badr.masoud.moh@gmail.com" class="contact-link">
-                                <span class="icon-circle"><i class="fas fa-envelope"></i></span>
-                                <span>badr.masoud.moh@gmail.com</span>
-                            </a>
-                        </div>
-                        
-                        <div class="social-links mt-4">
-                            <a href="https://www.linkedin.com/in/badr-mohamed-8b1558330/" target="_blank" class="social-btn glass-panel" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://wa.me/201286204412" target="_blank" class="social-btn glass-panel" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://www.behance.net/badrmohamed52" target="_blank" class="social-btn glass-panel" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                            <a href="https://www.instagram.com/badr_mohamed_masoud/?hl=ar" target="_blank" class="social-btn glass-panel" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-wrapper glass-panel reveal js-delay-1">
-                        <form class="contact-form" action="https://formsubmit.co/badr.masoud.moh@gmail.com" method="POST">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_template" value="table">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" required placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" required placeholder="john@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="4" required placeholder="Tell me about your project..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer glass-panel">
-        <div class="container footer-content text-center">
-            <p>&copy; 2026 Badr Mohamed Masoud. All rights reserved.</p>
-            <a href="#hero" class="back-to-top" aria-label="Back to Top">
-                <i class="fas fa-chevron-up"></i>
+        <div class="hero__body">
+          <p class="lead">Graphic designer crafting bold visuals, social campaigns, and creative identities.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#work">Explore my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
+            <a class="btn btn--ghost" href="#contact">Let's talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <a class="scroll-cue" href="#work">
+            <span class="section-index">01</span>
+            <span class="scroll-cue__label">Scroll to explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+          </a>
         </div>
-    </footer>
+      </div>
 
+      <p class="hero__side" aria-hidden="true">Scroll</p>
+    </section>
 
+    <!-- ===================== Selected work ===================== -->
+    <section id="work" class="section work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="work__head">
+          <picture class="work__char">
+            <source type="image/avif" srcset="src/assets/img/work-tablet-480.avif 480w, src/assets/img/work-tablet-800.avif 800w" sizes="(min-width: 900px) 22vw, 50vw">
+            <source type="image/webp" srcset="src/assets/img/work-tablet-480.webp 480w, src/assets/img/work-tablet-800.webp 800w" sizes="(min-width: 900px) 22vw, 50vw">
+            <img src="src/assets/img/work-tablet-480.png" width="1086" height="1448" alt="" loading="lazy" decoding="async">
+          </picture>
+          <p class="eyebrow"><span class="section-index">02</span> / Selected work</p>
+          <h2 id="work-title" class="display work__title">Featured <span class="accent">projects.</span></h2>
+          <div class="work__aside">
+            <p class="muted">A curated collection of social media campaigns, brand identities, and print designs.</p>
+            <a class="link-arrow" href="gallery.html">View all work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <i class="fas fa-check-circle"></i>
-        <span id="toast-message">Copied. Now use it.</span>
+        <ul class="work__grid" role="list">
+          <li class="work-card">
+            <a class="work-card__link" href="gallery.html#bstudy">
+              <picture class="work-card__media">
+                <source type="image/avif" srcset="src/assets/img/bstudy1-480.avif 480w, src/assets/img/bstudy1-800.avif 800w, src/assets/img/bstudy1-1080.avif 1080w" sizes="(min-width: 900px) 30vw, 92vw">
+                <source type="image/webp" srcset="src/assets/img/bstudy1-480.webp 480w, src/assets/img/bstudy1-800.webp 800w, src/assets/img/bstudy1-1080.webp 1080w" sizes="(min-width: 900px) 30vw, 92vw">
+                <img src="src/assets/img/bstudy1-800.jpg" width="1080" height="1080" alt="B-Study open registration social media post" loading="lazy" decoding="async">
+              </picture>
+              <span class="work-card__meta">
+                <span class="work-card__title">B-Study</span>
+                <span class="work-card__cat">Social Media · Campaign</span>
+                <span class="work-card__count">4 designs</span>
+                <svg class="work-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </span>
+            </a>
+          </li>
+          <li class="work-card">
+            <a class="work-card__link" href="gallery.html#mawhiba">
+              <picture class="work-card__media">
+                <source type="image/avif" srcset="src/assets/img/smart1-480.avif 480w, src/assets/img/smart1-800.avif 800w, src/assets/img/smart1-1024.avif 1024w" sizes="(min-width: 900px) 30vw, 92vw">
+                <source type="image/webp" srcset="src/assets/img/smart1-480.webp 480w, src/assets/img/smart1-800.webp 800w, src/assets/img/smart1-1024.webp 1024w" sizes="(min-width: 900px) 30vw, 92vw">
+                <img src="src/assets/img/smart1-800.jpg" width="1024" height="1024" alt="Mawhiba+ key visual" loading="lazy" decoding="async">
+              </picture>
+              <span class="work-card__meta">
+                <span class="work-card__title">Mawhiba+</span>
+                <span class="work-card__cat">Brand Identity · Education</span>
+                <span class="work-card__count">4 designs</span>
+                <svg class="work-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </span>
+            </a>
+          </li>
+          <li class="work-card">
+            <a class="work-card__link" href="gallery.html#training">
+              <picture class="work-card__media">
+                <source type="image/avif" srcset="src/assets/img/training1-480.avif 480w, src/assets/img/training1-800.avif 800w, src/assets/img/training1-1080.avif 1080w" sizes="(min-width: 900px) 30vw, 92vw">
+                <source type="image/webp" srcset="src/assets/img/training1-480.webp 480w, src/assets/img/training1-800.webp 800w, src/assets/img/training1-1080.webp 1080w" sizes="(min-width: 900px) 30vw, 92vw">
+                <img src="src/assets/img/training1-800.jpg" width="1080" height="1080" alt="Training courses cover design" loading="lazy" decoding="async">
+              </picture>
+              <span class="work-card__meta">
+                <span class="work-card__title">Training Courses</span>
+                <span class="work-card__cat">Print &amp; Promo</span>
+                <span class="work-card__count">4 designs</span>
+                <svg class="work-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="work__more">
+          <p>I regularly document my social media campaigns, brand identities, ad creatives, and promotional designs on my Behance portfolio. Discover my latest high-fidelity visual projects.</p>
+          <a class="btn btn--ghost" href="https://www.behance.net/badrmohamed52" target="_blank" rel="noopener">Visit Behance Portfolio<span class="visually-hidden"> (opens in a new tab)</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== About ===================== -->
+    <section id="about" class="section about grain" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__visual" aria-hidden="true">
+          <div class="about__slab"></div>
+          <div class="about__circle"></div>
+          <picture class="about__char">
+            <source type="image/avif" srcset="src/assets/img/about-glasses-480.avif 480w, src/assets/img/about-glasses-800.avif 800w, src/assets/img/about-glasses-1200.avif 1200w" sizes="(min-width: 900px) 36vw, 88vw">
+            <source type="image/webp" srcset="src/assets/img/about-glasses-480.webp 480w, src/assets/img/about-glasses-800.webp 800w, src/assets/img/about-glasses-1200.webp 1200w" sizes="(min-width: 900px) 36vw, 88vw">
+            <img src="src/assets/img/about-glasses-800.png" width="1208" height="1302" alt="" loading="lazy" decoding="async">
+          </picture>
+          <span class="about__sticker sticker">Badr<br>Mohamed<br>Masoud</span>
+        </div>
+
+        <div class="about__copy">
+          <p class="eyebrow"><span class="section-index">03</span> / About me</p>
+          <h2 id="about-title" class="display about__title">The human behind <span class="accent">the pixels.</span></h2>
+          <p class="about__role">Badr Mohamed Masoud — Graphic &amp; Social Media Designer</p>
+          <p class="about__highlight">I am a results-driven Graphic Designer with 1–2 years of experience creating high-impact social media designs, digital campaigns, and visual content.</p>
+          <p>A passionate creative professional with a proven track record. I transform ideas into visually engaging, high-converting digital experiences driven by strategic design.</p>
+          <p>I specialize in translating unique brand identities into engaging, on-brand visuals across sectors like education, food &amp; beverage, real estate, and retail. By combining strong design fundamentals with proven leadership and communication skills, I deliver strategic assets that drive engagement and growth.</p>
+
+          <div class="objective">
+            <h3 class="objective__label">Career objective</h3>
+            <p>To continuously evolve as a high-impact creative designer, delivering transformative visual solutions that empower brands to stand out, deeply engage their audiences, and achieve measurable, strategic success.</p>
+          </div>
+
+          <ul class="social-pills" role="list" aria-label="Social profiles">
+            <li><a href="https://www.linkedin.com/in/badr-mohamed-8b1558330/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://wa.me/201286204412" target="_blank" rel="noopener">WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.behance.net/badrmohamed52" target="_blank" rel="noopener">Behance<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.instagram.com/badr_mohamed_masoud/?hl=ar" target="_blank" rel="noopener">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Expertise ===================== -->
+    <section id="expertise" class="section expertise" aria-labelledby="expertise-title">
+      <div class="container">
+        <p class="eyebrow eyebrow--ink"><span class="section-index">04</span> / Expertise</p>
+        <h2 id="expertise-title" class="display expertise__title">Core skills <span class="accent accent--olive">&amp; tools.</span></h2>
+
+        <div class="skills">
+          <article class="skill">
+            <h3 class="skill__title">Design Software</h3>
+            <ul role="list">
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Canva</li>
+            </ul>
+          </article>
+          <article class="skill">
+            <h3 class="skill__title">Social Media Design</h3>
+            <ul role="list">
+              <li>Post Design</li>
+              <li>Content Calendars</li>
+              <li>Campaign Visuals</li>
+              <li>Ad Creatives</li>
+            </ul>
+          </article>
+          <article class="skill">
+            <h3 class="skill__title">Brand &amp; Layout</h3>
+            <ul role="list">
+              <li>Branding Materials</li>
+              <li>Promotional Brochures</li>
+              <li>Print &amp; Digital Layouts</li>
+              <li>Sector-specific Visuals</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="process">
+          <h3 class="process__label">Work process</h3>
+          <ol class="process__steps" role="list">
+            <li><span class="process__num">01</span><strong>Discovery</strong><span>Understanding requirements</span></li>
+            <li><span class="process__num">02</span><strong>Research</strong><span>Analyzing trends &amp; competition</span></li>
+            <li><span class="process__num">03</span><strong>Concepts</strong><span>Creating initial designs</span></li>
+            <li><span class="process__num">04</span><strong>Refinement</strong><span>Iterating on client feedback</span></li>
+            <li><span class="process__num">05</span><strong>Delivery</strong><span>Final polished assets</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Experience ===================== -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="eyebrow"><span class="section-index">05</span> / Experience</p>
+        <h2 id="experience-title" class="display">Where I've <span class="accent">made noise.</span></h2>
+
+        <ol class="jobs" role="list">
+          <li class="job">
+            <p class="job__date">May 2026 — Present</p>
+            <div class="job__main">
+              <h3 class="job__role">Graphic Designer (Part-time)</h3>
+              <p class="job__company">INNERWIN Academy</p>
+            </div>
+            <ul class="job__list" role="list">
+              <li>Design social media posts, ad creatives, and promotional materials for marketing campaigns.</li>
+              <li>Collaborate with the marketing team to maintain consistent visual branding across all platforms.</li>
+              <li>Deliver design assets on tight turnarounds alongside a full-time academic role.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <p class="job__date">Aug 2025 — May 2026</p>
+            <div class="job__main">
+              <h3 class="job__role">Graphic Designer (Full-time)</h3>
+              <p class="job__company">Continuing Education Academy — Sharjah</p>
+            </div>
+            <ul class="job__list" role="list">
+              <li>Produced a full range of social media and marketing visuals for course promotions, events, and academic programs.</li>
+              <li>Designed digital and print materials aligned with the academy's brand guidelines.</li>
+              <li>Worked directly with academic coordinators to translate program content into engaging visual communications.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <p class="job__date">Jun 2025 — Dec 2025</p>
+            <div class="job__main">
+              <h3 class="job__role">Graphic Designer (Freelance)</h3>
+              <p class="job__company">B-Little Hands</p>
+            </div>
+            <ul class="job__list" role="list">
+              <li>Created social media design content tailored to a children/education-focused brand identity.</li>
+              <li>Delivered a consistent visual style across multiple platforms as an independent contractor.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <p class="job__date">May 2025 — Dec 2025</p>
+            <div class="job__main">
+              <h3 class="job__role">Graphic Designer (Freelance)</h3>
+              <p class="job__company">B-Study</p>
+            </div>
+            <ul class="job__list" role="list">
+              <li>Designed educational social media content and promotional creatives for course offerings.</li>
+              <li>Managed design projects independently from concept to final delivery for an external client.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== Certifications ===================== -->
+    <section id="certifications" class="section certs" aria-labelledby="certs-title">
+      <div class="container">
+        <p class="eyebrow"><span class="section-index">06</span> / Certifications</p>
+        <h2 id="certs-title" class="display">Certifications <span class="accent">&amp; trainings.</span></h2>
+
+        <ul class="cert-grid" role="list">
+          <li class="cert">
+            <p class="cert__org">Ministry of Communications &amp; IT, Egypt</p>
+            <h3 class="cert__title">Digital Arts — Graphics Designer</h3>
+            <p class="cert__date">Digital Egypt Pioneers Program | Jun — Dec 2025</p>
+          </li>
+          <li class="cert">
+            <p class="cert__org">Ministry of Communications &amp; IT, Egypt</p>
+            <h3 class="cert__title">Team Leader Recognition</h3>
+            <p class="cert__date">Digital Egypt Pioneers Program | Jun — Dec 2025</p>
+          </li>
+          <li class="cert">
+            <p class="cert__org">Aspire Institute</p>
+            <h3 class="cert__title">Aspire Leaders Program (40 hours)</h3>
+            <p class="cert__date">Jul 2026</p>
+          </li>
+          <li class="cert">
+            <p class="cert__org">McKinsey.org</p>
+            <h3 class="cert__title">Forward Program</h3>
+            <p class="cert__date">Jun 2026</p>
+          </li>
+          <li class="cert">
+            <p class="cert__org">Codeavour Egypt / ARTPARK / AWS</p>
+            <h3 class="cert__title">Certificate of Appreciation — Event Organization</h3>
+            <p class="cert__date">Codeavour 6.0 AI, Programming &amp; Robotics Competition | Feb 2025</p>
+          </li>
+          <li class="cert">
+            <p class="cert__org">Directorate of Youth &amp; Sports, Alexandria</p>
+            <h3 class="cert__title">Member, Social Media Committee (Season 4)</h3>
+            <p class="cert__date">2024 — 2025</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== Services ===================== -->
+    <section id="services" class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="eyebrow"><span class="section-index">07</span> / Services</p>
+        <h2 id="services-title" class="display">Ideas into <span class="accent">impact.</span></h2>
+
+        <ol class="service-grid" role="list">
+          <li class="service"><span class="service__num">01</span><h3 class="service__title">Social Media Design</h3><p>High-converting posts, stories, and campaign graphics.</p></li>
+          <li class="service"><span class="service__num">02</span><h3 class="service__title">Advertising Creatives</h3><p>Eye-catching ad creatives meant to drive clicks and sales.</p></li>
+          <li class="service"><span class="service__num">03</span><h3 class="service__title">Branding &amp; Logos</h3><p>Memorable logos and compelling visual identities.</p></li>
+          <li class="service"><span class="service__num">04</span><h3 class="service__title">Course Brochures</h3><p>Structured, readable promotional materials for education.</p></li>
+          <li class="service"><span class="service__num">05</span><h3 class="service__title">Campaign Design</h3><p>Holistic visual design for end-to-end promotional campaigns.</p></li>
+          <li class="service"><span class="service__num">06</span><h3 class="service__title">Print &amp; Digital Layouts</h3><p>Polished layout designs for print materials, PDFs, and corporate reports.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow eyebrow--ink"><span class="section-index">08</span> / Get in touch</p>
+          <h2 id="contact-title" class="display contact__title">Got an idea?<br>Let's make it real.</h2>
+          <p class="contact__lead"><strong>Let's start a project together.</strong> Feel free to reach out for collaborations or just a friendly hello.</p>
+
+          <ul class="contact__links" role="list">
+            <li><a class="contact__link" href="tel:+201286204412"><span class="contact__kind">Phone</span>+20 128 620 4412</a></li>
+            <li class="contact__email">
+              <a class="contact__link" href="mailto:badr.masoud.moh@gmail.com"><span class="contact__kind">Email</span>badr.masoud.moh@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="badr.masoud.moh@gmail.com">Copy</button>
+            </li>
+          </ul>
+
+          <ul class="social-pills social-pills--ink" role="list" aria-label="Social profiles">
+            <li><a href="https://www.linkedin.com/in/badr-mohamed-8b1558330/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://wa.me/201286204412" target="_blank" rel="noopener">WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.behance.net/badrmohamed52" target="_blank" rel="noopener">Behance<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.instagram.com/badr_mohamed_masoud/?hl=ar" target="_blank" rel="noopener">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          </ul>
+
+          <picture class="contact__char" aria-hidden="true">
+            <source type="image/avif" srcset="src/assets/img/contact-reach-480.avif 480w, src/assets/img/contact-reach-800.avif 800w" sizes="(min-width: 900px) 26vw, 70vw">
+            <source type="image/webp" srcset="src/assets/img/contact-reach-480.webp 480w, src/assets/img/contact-reach-800.webp 800w" sizes="(min-width: 900px) 26vw, 70vw">
+            <img src="src/assets/img/contact-reach-480.png" width="1199" height="1312" alt="" loading="lazy" decoding="async">
+          </picture>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/badr.masoud.moh@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New message from the portfolio">
+          <div class="hp" aria-hidden="true">
+            <label for="honey">Leave this field empty</label>
+            <input type="text" name="_honey" id="honey" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required autocomplete="name" placeholder="John Doe">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required autocomplete="email" placeholder="john@example.com">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Send message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; 2026 Badr Mohamed Masoud. All rights reserved.</p>
+      <a class="link-arrow" href="#top">Back to top
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
     </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script type="module" src="js/script.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="/src/scripts/home.js"></script>
 </body>
 </html>

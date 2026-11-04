@@ -6,9 +6,10 @@
    and adds .motion-done, which cancels the fallback.
    ========================================================================== */
 @media (prefers-reduced-motion: no-preference) {
+  /* The character image is deliberately excluded: it is the LCP element. */
   .js:not(.motion-done) .hero__head,
   .js:not(.motion-done) .hero__body,
-  .js:not(.motion-done) .hero__stage {
+  .js:not(.motion-done) .hero__layer {
     visibility: hidden;
     animation: motion-fallback 0s linear 2.5s forwards;
   }

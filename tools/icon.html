@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Icon (dev tool)</title>
+  <!-- Dev-only source for the favicon set (512x512). Rendered by tools/render-og.mjs. -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <style>
+    html, body { width: 512px; height: 512px; overflow: hidden; background: transparent; }
+    .icon { width: 512px; height: 512px; border-radius: 112px; background: var(--ink); display: grid; place-items: center; position: relative; overflow: hidden; }
+    .icon::before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: var(--olive); right: -70px; bottom: -80px; }
+    .b { position: relative; font-family: var(--font-display); font-size: 380px; line-height: 1; color: var(--cream); transform: translate(-22px, 8px); }
+    .b span { position: absolute; right: -96px; top: 18px; font-size: 230px; color: var(--orange); }
+  </style>
+</head>
+<body>
+  <div class="icon"><div class="b">B<span>*</span></div></div>
+</body>
+</html>
