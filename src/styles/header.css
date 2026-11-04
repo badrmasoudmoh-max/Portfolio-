@@ -75,12 +75,12 @@
 }
 
 .site-nav__list a:hover,
-.site-nav__list a[aria-current='true'] {
+.site-nav__list a[aria-current] {
   color: var(--orange);
 }
 
 .site-nav__list a:hover::after,
-.site-nav__list a[aria-current='true']::after {
+.site-nav__list a[aria-current]::after {
   transform: scaleX(1);
 }
 

@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Selected work (home)
+   Three real projects; middle card drops by --offset-lg on desktop (chaos rule).
+   ========================================================================== */
+.work {
+  background: var(--olive);
+  background-image: linear-gradient(180deg, rgb(21 22 19 / 0.35), transparent 40%);
+}
+
+.work__head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+  row-gap: var(--sp-4);
+  align-items: end;
+}
+
+.work__head .eyebrow {
+  grid-column: 1 / -1;
+  color: var(--cream);
+}
+
+.work__title {
+  grid-column: 1 / 8;
+}
+
+.work__aside {
+  grid-column: 9 / 13;
+  display: grid;
+  gap: var(--sp-4);
+  justify-items: start;
+}
+
+.work__aside .muted {
+  color: rgb(244 240 230 / 0.82);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: 44px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--lime);
+}
+
+.link-arrow svg {
+  width: 1.1em;
+  height: 1.1em;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.link-arrow:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.work__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--col-gap);
+  margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-card:nth-child(2) {
+  margin-top: var(--offset-lg);
+}
+
+.work-card__link {
+  display: block;
+  height: 100%;
+  padding: var(--sp-3);
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: transform var(--dur-3) var(--ease-out), box-shadow var(--dur-3) var(--ease-out);
+}
+
+.work-card__media {
+  display: block;
+  overflow: hidden;
+  border-radius: calc(var(--radius-md) - 4px);
+  aspect-ratio: 1;
+  background: var(--ink-3);
+}
+
+.work-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-4) var(--ease-out);
+}
+
+.work-card__meta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-2) var(--sp-2);
+}
+
+.work-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.1rem + 1vw, 2.125rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.work-card__cat {
+  grid-column: 1;
+  margin-top: var(--sp-2);
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.work-card__count {
+  grid-column: 1;
+  margin-top: var(--sp-1);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
+.work-card__arrow {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: start;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .work-card__link:hover {
+    transform: translate(-4px, -4px) rotate(var(--tilt-xs));
+    box-shadow: var(--shadow-hard) var(--lime);
+  }
+
+  .work-card__link:hover .work-card__media img {
+    transform: scale(1.05);
+  }
+
+  .work-card__link:hover .work-card__arrow {
+    transform: rotate(45deg);
+  }
+}
+
+.work__more {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  color: rgb(244 240 230 / 0.82);
+}
+
+.work__more a {
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 899px) {
+  .work__title,
+  .work__aside {
+    grid-column: 1 / -1;
+  }
+
+  .work__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work-card:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .work__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .work-card:nth-child(3) .work-card__media {
+    aspect-ratio: 16 / 9;
+  }
+}
