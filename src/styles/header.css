@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Site header + navigation
+   Desktop (≥900px): inline nav + status pill.
+   Mobile: toggle opens a full-screen panel. Without JS (no html.js class)
+   the links stay visible inline so navigation never depends on scripting.
+   ========================================================================== */
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: var(--z-nav);
+  padding-block: clamp(16px, 2.4vw, 28px);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.2rem + 0.8vw, 2rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 5rem);
+  flex: 1;
+  justify-content: space-between;
+  margin-left: clamp(2rem, 8vw, 9rem);
+}
+
+.site-nav__list {
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__list a {
+  position: relative;
+  display: inline-block;
+  padding-block: var(--sp-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--dur-1) linear;
+}
+
+.site-nav__list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.site-nav__list a:hover,
+.site-nav__list a[aria-current='true'] {
+  color: var(--orange);
+}
+
+.site-nav__list a:hover::after,
+.site-nav__list a[aria-current='true']::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* ---------------- Mobile ---------------- */
+@media (max-width: 899px) {
+  .site-nav__status {
+    display: none;
+  }
+
+  /* No-JS fallback: compact inline links */
+  html:not(.js) .site-header__inner {
+    flex-wrap: wrap;
+  }
+
+  html:not(.js) .site-nav {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+
+  html:not(.js) .site-nav__list {
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+  }
+
+  /* JS: toggle + full-screen panel */
+  .js .menu-toggle {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-right: -10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle__bars,
+  .menu-toggle__bars::before,
+  .menu-toggle__bars::after {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: var(--cream);
+    transition: transform var(--dur-2) var(--ease-out), opacity var(--dur-1) linear;
+  }
+
+  .menu-toggle__bars {
+    position: relative;
+  }
+
+  .menu-toggle__bars::before,
+  .menu-toggle__bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .menu-toggle__bars::before { top: -8px; }
+  .menu-toggle__bars::after { top: 8px; width: 18px; }
+
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars { background: transparent; }
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars::before { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars::after { width: 26px; transform: translateY(-8px) rotate(-45deg); }
+
+  .js .site-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 112px var(--gutter) var(--sp-8);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: var(--ink);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--dur-2) var(--ease-out), visibility 0s linear var(--dur-2);
+  }
+
+  .js .site-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--dur-2) var(--ease-out);
+  }
+
+  .js .site-nav__list {
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .js .site-nav__list a {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 14vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
+
+  .js .site-nav__list a::after {
+    height: 4px;
+  }
+
+  .js .site-nav.is-open .site-nav__status {
+    display: inline-flex;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+}

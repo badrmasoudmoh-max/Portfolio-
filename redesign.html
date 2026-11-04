@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Badr Masoud — Graphic Designer | Controlled Chaos</title>
+  <meta name="description" content="Graphic designer crafting bold visuals, social campaigns, and creative identities.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/src/styles/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top" aria-label="Badr Masoud — home">BADR<span aria-hidden="true">*</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#work" aria-current="true">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="status-pill site-nav__status">Available for<br>creative projects</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== Hero ===================== -->
+    <section id="top" class="hero grain" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+
+        <div class="hero__head">
+          <p class="eyebrow">Independent graphic designer / Egypt</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__line">I make</span>
+            <span class="hero__line accent">Visual noise.</span>
+            <span class="hero__line"><span class="hero__underline">That matters.<svg viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 15 C 70 7, 150 5, 230 10 S 350 17, 394 9" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span></span>
+          </h1>
+        </div>
+
+        <div class="hero__stage">
+          <div class="hero__layer hero__slab" aria-hidden="true"></div>
+          <div class="hero__layer hero__circle" aria-hidden="true"></div>
+          <div class="hero__layer hero__box" aria-hidden="true"></div>
+
+          <picture class="hero__character">
+            <source type="image/avif" srcset="src/assets/img/hero-sitting-480.avif 480w, src/assets/img/hero-sitting-800.avif 800w, src/assets/img/hero-sitting-1086.avif 1086w" sizes="(min-width: 900px) 38vw, 80vw">
+            <source type="image/webp" srcset="src/assets/img/hero-sitting-480.webp 480w, src/assets/img/hero-sitting-800.webp 800w, src/assets/img/hero-sitting-1086.webp 1086w" sizes="(min-width: 900px) 38vw, 80vw">
+            <img src="src/assets/img/hero-sitting-800.png" width="1086" height="1448" alt="Illustrated portrait of Badr Masoud in an orange jacket, sitting with a stylus pen" fetchpriority="high" decoding="async">
+          </picture>
+
+          <p class="hero__layer hero__note" aria-hidden="true">Good design<br>good mood</p>
+          <svg class="hero__layer hero__asterisk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3v34M5 11.5l30 17M5 28.5l30-17" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+          <div class="hero__layer hero__sticker" aria-hidden="true"><span class="sticker">Ideas<br>design<br>impact</span></div>
+          <div class="hero__layer hero__swatches swatch-strip" aria-hidden="true"><span style="background: var(--orange)"></span><span style="background: var(--olive)"></span><span style="background: var(--ink)"></span><span style="background: var(--lime)"></span></div>
+          <p class="hero__layer hero__stamp" aria-hidden="true">Controlled<br>chaos</p>
+        </div>
+
+        <div class="hero__body">
+          <p class="lead">Graphic designer crafting bold visuals, social campaigns, and creative identities.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#work">Explore my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Let's talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <a class="scroll-cue" href="#work">
+            <span class="section-index">01</span>
+            <span class="scroll-cue__label">Scroll to explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="hero__side" aria-hidden="true">Scroll</p>
+    </section>
+  </main>
+
+  <script type="module" src="/src/scripts/home.js"></script>
+</body>
+</html>
