@@ -224,7 +224,53 @@
       "jpg"
     ]
   },
+  "about-glasses": {
+    "width": 1208,
+    "height": 1302,
+    "alpha": true,
+    "widths": [
+      480,
+      800,
+      1200,
+      1208
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "png"
+    ]
+  },
+  "contact-reach": {
+    "width": 1199,
+    "height": 1312,
+    "alpha": true,
+    "widths": [
+      480,
+      800,
+      1199
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "png"
+    ]
+  },
   "hero-sitting": {
+    "width": 1086,
+    "height": 1448,
+    "alpha": true,
+    "widths": [
+      480,
+      800,
+      1086
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "png"
+    ]
+  },
+  "work-tablet": {
     "width": 1086,
     "height": 1448,
     "alpha": true,
