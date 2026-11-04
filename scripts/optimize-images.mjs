@@ -12,7 +12,12 @@ const OUT = 'src/assets/img';
 const WIDTHS = [480, 800, 1200, 1600];
 
 await mkdir(OUT, { recursive: true });
-const files = (await readdir(SRC)).filter((f) => /\.(jpe?g|png)$/i.test(f));
+// Top-level project images plus character artwork in images/characters/.
+const isImg = (f) => /\.(jpe?g|png)$/i.test(f);
+const files = [
+  ...(await readdir(SRC)).filter(isImg),
+  ...(await readdir(join(SRC, 'characters')).catch(() => [])).filter(isImg).map((f) => `characters/${f}`),
+];
 const manifest = {};
 
 for (const file of files) {

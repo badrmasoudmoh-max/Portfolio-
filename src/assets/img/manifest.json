@@ -223,5 +223,20 @@
       "webp",
       "jpg"
     ]
+  },
+  "hero-sitting": {
+    "width": 1086,
+    "height": 1448,
+    "alpha": true,
+    "widths": [
+      480,
+      800,
+      1086
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "png"
+    ]
   }
 }
