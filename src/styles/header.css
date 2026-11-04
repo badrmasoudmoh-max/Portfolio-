@@ -11,6 +11,34 @@
   padding-block: clamp(16px, 2.4vw, 28px);
 }
 
+/* JS: fixed header that turns solid and hides on scroll-down.
+   No backdrop-filter / persistent transform here: either would become the
+   containing block for the fixed mobile menu panel. */
+.js .site-header:not(.site-header--solid) {
+  position: fixed;
+  transition:
+    background-color var(--dur-2) linear,
+    padding var(--dur-2) var(--ease-out),
+    translate var(--dur-3) var(--ease-out);
+}
+
+.js .site-header.is-solid {
+  padding-block: 12px;
+  background: rgb(21 22 19 / 0.94);
+  border-bottom: 1px solid var(--line);
+}
+
+.js .site-header.is-hidden {
+  translate: 0 -110%;
+}
+
+/* While the menu is open the header must have no translate (even mid-
+   transition), otherwise it becomes the containing block of the fixed panel. */
+.js body.nav-open .site-header {
+  translate: none;
+  transition: none;
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;

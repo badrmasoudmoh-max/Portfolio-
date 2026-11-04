@@ -6,8 +6,7 @@
 .site-header--solid {
   position: sticky;
   top: 0;
-  background: rgb(21 22 19 / 0.92);
-  backdrop-filter: blur(8px);
+  background: rgb(21 22 19 / 0.96); /* no backdrop-filter: it would trap the fixed mobile menu */
   border-bottom: 1px solid var(--line);
 }
 
