@@ -1,6 +1,7 @@
 /* Gallery page (redesign) entry */
 @import './main.css';
 @import './header.css';
+@import './extras.css';
 
 /* ---- Page frame ---- */
 .site-header--solid {

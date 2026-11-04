@@ -65,7 +65,7 @@ const featured = data.projects.filter((p) => p.featured);
 const cards = featured.map((p, i) => {
   const count = p.images.length + (p.legacy || []).length;
   return `          <li class="work-card">
-            <a class="work-card__link" href="gallery.html#${p.key}">
+            <a class="work-card__link" href="gallery.html#${p.key}" data-project="${p.key}">
               ${picture(`w-${p.key}-cover`, '(min-width: 900px) 30vw, 92vw', `${p.title} — project cover`, { cls: 'work-card__media' })}
               <span class="work-card__meta">
                 <span class="work-card__num">${String(i + 1).padStart(2, '0')}</span>
@@ -80,6 +80,19 @@ const cards = featured.map((p, i) => {
 let index = readFileSync('index.html', 'utf8');
 index = replace(index, 'work-cards', cards);
 index = index.replace(/View all work(<svg| *\n)/, `View all ${data.projects.length} projects$1`);
+
+// Data for the project sheet overlay (image *names*; JS resolves them to built URLs)
+const sheet = featured.map((p, i) => ({
+  key: p.key,
+  num: String(i + 1).padStart(2, '0'),
+  title: p.title,
+  client: p.client,
+  category: p.category,
+  behance: p.behance,
+  images: [...p.images.map((f) => `w-${p.key}-${f.split('.')[0]}`), ...(p.legacy || []).map(([n]) => n)],
+}));
+const json = JSON.stringify(sheet).replace(/</g, '\\u003c');
+index = replace(index, 'projects-data', `  <script type="application/json" id="projects-data">${json}</script>`);
 writeFileSync('index.html', index);
 
 console.log(`gallery: ${items.length} tiles, ${data.projects.length} filters · home: ${featured.length} featured cards`);

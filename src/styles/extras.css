@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Extras: crossing tapes, hero speech bubble, draggable stickers, project
+   sheet, floating WhatsApp, page transitions.
+   ========================================================================== */
+
+/* ---------------- Crossing tapes ---------------- */
+.tapes {
+  position: relative;
+  z-index: 2;
+  height: clamp(150px, 16vw, 220px);
+  margin-block: calc(clamp(150px, 16vw, 220px) / -2);
+  overflow: clip;
+  pointer-events: none;
+}
+
+.tape {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  top: 50%;
+  padding-block: clamp(0.6rem, 1.2vw, 1rem);
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+}
+
+.tape--services {
+  background: var(--orange);
+  color: var(--ink);
+  transform: translateY(-60%) rotate(-3deg);
+  z-index: 2;
+}
+
+.tape--clients {
+  background: var(--cream);
+  color: var(--ink);
+  transform: translateY(-40%) rotate(2.5deg);
+}
+
+.tape__track {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding-right: clamp(1rem, 2vw, 1.75rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1rem + 1.6vw, 2.4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  will-change: transform;
+}
+
+.tape__track i {
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+.tape--clients .tape__track {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.85rem + 0.6vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.tape--clients .tape__track b {
+  padding: 0.25em 0.7em;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--lime);
+  font-size: 0.75em;
+  letter-spacing: var(--track-label);
+}
+
+.tape--clients .tape__track i {
+  font-size: 0.5em;
+  color: var(--orange);
+}
+
+/* Narrow screens: thinner tapes cross less, so pull them further apart */
+@media (max-width: 899px) {
+  .tapes { height: 170px; margin-block: -85px; }
+  .tape--services { transform: translateY(-105%) rotate(-4deg); }
+  .tape--clients { transform: translateY(5%) rotate(3deg); }
+}
+
+/* ---------------- Hero speech bubble ---------------- */
+.hero__bubble {
+  position: absolute;
+  z-index: var(--z-sticker);
+  left: 4%;
+  top: 2%;
+  margin: 0;
+  padding: 0.7rem 1rem;
+  max-width: 14rem;
+  border: 2px solid var(--ink);
+  border-radius: 18px 18px 18px 4px;
+  background: var(--lime);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  box-shadow: 4px 4px 0 var(--ink);
+  opacity: 0;
+  transform: translateY(8px) scale(0.9) rotate(-4deg);
+  transform-origin: bottom left;
+  transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-spring);
+  pointer-events: none;
+}
+
+.hero__bubble span { display: none; }
+.hero__bubble[data-say='work'] [data-say='work'],
+.hero__bubble[data-say='talk'] [data-say='talk'] { display: inline; }
+
+.hero__bubble.is-on {
+  opacity: 1;
+  transform: none;
+  transform: rotate(-4deg);
+}
+
+@media (max-width: 899px) {
+  .hero__bubble { display: none; }
+}
+
+/* ---------------- Draggable stickers ---------------- */
+.is-draggable {
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.is-draggable.is-dragging {
+  cursor: grabbing;
+}
+
+.hero__sticker {
+  pointer-events: none;
+}
+
+.hero__sticker .sticker.is-draggable {
+  pointer-events: auto;
+}
+
+/* ---------------- Project sheet ---------------- */
+body.sheet-open {
+  overflow: hidden;
+}
+
+.project-sheet {
+  width: min(100vw, 1280px);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--cream);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.project-sheet::backdrop {
+  background: rgb(0 0 0 / 0.65);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-sheet[open] {
+    animation: sheet-in var(--dur-3) var(--ease-out);
+  }
+
+  .project-sheet[open]::backdrop {
+    animation: fade-in var(--dur-3) linear;
+  }
+}
+
+@keyframes sheet-in {
+  from { transform: translateX(8%); opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+.project-sheet__inner {
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.project-sheet__head {
+  display: grid;
+  gap: var(--sp-3);
+  padding-right: 56px;
+}
+
+.project-sheet__num {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
+.project-sheet__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.project-sheet__meta {
+  color: var(--text-muted);
+}
+
+.project-sheet__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.project-sheet__actions [hidden] {
+  display: none;
+}
+
+.project-sheet__grid {
+  columns: 2 280px;
+  column-gap: var(--col-gap);
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-sheet__grid li {
+  break-inside: avoid;
+  margin-bottom: var(--col-gap);
+}
+
+.project-sheet__grid img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: var(--ink-3);
+}
+
+.project-sheet__close {
+  position: fixed;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: var(--border) solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cream);
+  cursor: pointer;
+}
+
+.project-sheet__close:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--ink);
+}
+
+.project-sheet__close svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ---------------- Floating WhatsApp (mobile) ---------------- */
+.fab-whatsapp {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .fab-whatsapp {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: calc(var(--z-nav) - 1);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    min-height: 52px;
+    padding: 0.7rem 1.1rem;
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-pill);
+    background: var(--lime);
+    color: var(--ink);
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: translate var(--dur-3) var(--ease-out), opacity var(--dur-2) linear;
+  }
+
+  .fab-whatsapp svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .js .fab-whatsapp:not(.is-visible) {
+    translate: 0 140%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.nav-open .fab-whatsapp,
+  body.sheet-open .fab-whatsapp {
+    display: none;
+  }
+}
+
+/* ---------------- Page transitions (home ↔ gallery) ---------------- */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  .logo {
+    view-transition-name: site-logo;
+  }
+
+  ::view-transition-old(root) {
+    animation: vt-out 0.28s var(--ease-snap) both;
+  }
+
+  ::view-transition-new(root) {
+    animation: vt-in 0.5s var(--ease-out) both;
+  }
+}
+
+@keyframes vt-out {
+  to { opacity: 0; transform: translateY(-24px); }
+}
+
+@keyframes vt-in {
+  from { opacity: 0; transform: translateY(40px); }
+}
