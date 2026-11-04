@@ -23,7 +23,7 @@ export function initProjectSheet() {
     const p = projects[key];
     if (!p) return false;
     opener = link;
-    $('ps-num').textContent = `${p.num} / Featured project`;
+    $('ps-num').textContent = `${p.num} / Project`;
     $('ps-title').textContent = p.title;
     $('ps-meta').textContent = `${p.category} · ${p.client} · ${p.images.length} designs`;
     const be = $('ps-behance');

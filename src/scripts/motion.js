@@ -108,7 +108,7 @@ function sectionReveals() {
 
   const groups = [
     '.section .eyebrow',
-    '.work__aside', '.work-card', '.work__more',
+    '.work__aside', '.shot', '.project-chips', '.work__more',
     '.about__copy > p:not(.eyebrow)', '.objective', '.social-pills li',
     '.skill', '.process__steps li',
     '.job',

@@ -450,21 +450,6 @@
       "jpg"
     ]
   },
-  "w-ads-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
   "w-bstudy-01": {
     "width": 1200,
     "height": 1200,
@@ -585,21 +570,6 @@
       "jpg"
     ]
   },
-  "w-bstudy-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
   "w-eid-01": {
     "width": 1400,
     "height": 1867,
@@ -608,21 +578,6 @@
       480,
       800,
       1200
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
-  "w-eid-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
     ],
     "formats": [
       "avif",
@@ -668,21 +623,6 @@
       480,
       800,
       1200
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
-  "w-food-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
     ],
     "formats": [
       "avif",
@@ -810,21 +750,6 @@
       "jpg"
     ]
   },
-  "w-innerwin-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
   "w-kids-02": {
     "width": 1400,
     "height": 1400,
@@ -945,21 +870,6 @@
       "jpg"
     ]
   },
-  "w-kids-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
   "w-realestate-01": {
     "width": 1400,
     "height": 1400,
@@ -1050,21 +960,6 @@
       "jpg"
     ]
   },
-  "w-realestate-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
   "w-tech-01": {
     "width": 1400,
     "height": 1400,
@@ -1133,21 +1028,6 @@
       480,
       800,
       1200
-    ],
-    "formats": [
-      "avif",
-      "webp",
-      "jpg"
-    ]
-  },
-  "w-tech-cover": {
-    "width": 808,
-    "height": 632,
-    "alpha": false,
-    "widths": [
-      480,
-      800,
-      808
     ],
     "formats": [
       "avif",

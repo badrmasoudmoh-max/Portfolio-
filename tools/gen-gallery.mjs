@@ -1,7 +1,8 @@
-// Generates gallery filters + tiles (gallery.html) and the featured project
-// cards (index.html) from tools/gallery-data.json + src/assets/img/manifest.json.
-// Only the regions between <!-- gen:NAME --> and <!-- /gen:NAME --> are replaced.
-// Usage: npm run images && node tools/gen-gallery.mjs
+// Generates gallery filters + tiles (gallery.html), the home showcase of the
+// strongest single designs, the project chips and the project-sheet data
+// (index.html) from tools/gallery-data.json + src/assets/img/manifest.json.
+// Only regions between <!-- gen:NAME --> and <!-- /gen:NAME --> are replaced.
+// Usage: npm run images && npm run gallery
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const data = JSON.parse(readFileSync('tools/gallery-data.json', 'utf8'));
@@ -60,29 +61,35 @@ gallery = replace(gallery, 'filters', filters);
 gallery = replace(gallery, 'tiles', tiles.trimEnd());
 writeFileSync('gallery.html', gallery);
 
-/* ---------------- home featured cards ---------------- */
-const featured = data.projects.filter((p) => p.featured);
-const cards = featured.map((p, i) => {
-  const count = p.images.length + (p.legacy || []).length;
-  return `          <li class="work-card">
-            <a class="work-card__link" href="gallery.html#${p.key}" data-project="${p.key}">
-              ${picture(`w-${p.key}-cover`, '(min-width: 900px) 30vw, 92vw', `${p.title} — project cover`, { cls: 'work-card__media' })}
-              <span class="work-card__meta">
-                <span class="work-card__num">${String(i + 1).padStart(2, '0')}</span>
-                <span class="work-card__title">${esc(p.title.split(' — ')[0])}</span>
-                <span class="work-card__cat">${esc(p.category)} · ${esc(p.client)}</span>
-                <span class="work-card__count">${count} designs</span>
-                <svg class="work-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </span>
+
+/* ---------------- home showcase (strongest single designs) ---------------- */
+const byKey = Object.fromEntries(data.projects.map((p) => [p.key, p]));
+const TILT = [0, 1, 0, -1, 0, 1, 0, -1, 0];
+const shots = data.showcase.map(([key, file], i) => {
+  const p = byKey[key];
+  const tilt = TILT[i % TILT.length];
+  const cls = tilt ? ` shot--tilt${tilt > 0 ? 'R' : 'L'}` : '';
+  return `          <li class="shot${cls}">
+            <a class="shot__link" href="gallery.html#${key}" data-project="${key}">
+              ${picture(`w-${key}-${file}`, '(min-width: 1100px) 30vw, (min-width: 600px) 46vw, 92vw', `${p.title} — selected design`, { cls: 'shot__media', lazy: i > 2 })}
+              <span class="shot__cap"><span class="shot__client">${esc(p.client)}</span><span class="shot__cat">${esc(p.category)}</span></span>
             </a>
           </li>`;
 }).join('\n');
+
+const withWork = data.projects.filter((p) => p.images.length + (p.legacy || []).length > 0);
+const chips = withWork.map((p) => {
+  const n = p.images.length + (p.legacy || []).length;
+  return `            <li><a class="chip" href="gallery.html#${p.key}" data-project="${p.key}">${esc(p.label)} <span>${n}</span></a></li>`;
+}).join('\n');
+
 let index = readFileSync('index.html', 'utf8');
-index = replace(index, 'work-cards', cards);
-index = index.replace(/View all work(<svg| *\n)/, `View all ${data.projects.length} projects$1`);
+index = replace(index, 'showcase', shots);
+index = replace(index, 'project-chips', chips);
+index = index.replace(/View all (?:work|\d+ projects|\d+ designs)(<svg| *\n)/, `View all ${items.length} designs$1`);
 
 // Data for the project sheet overlay (image *names*; JS resolves them to built URLs)
-const sheet = featured.map((p, i) => ({
+const sheet = withWork.map((p, i) => ({
   key: p.key,
   num: String(i + 1).padStart(2, '0'),
   title: p.title,
@@ -95,4 +102,4 @@ const json = JSON.stringify(sheet).replace(/</g, '\\u003c');
 index = replace(index, 'projects-data', `  <script type="application/json" id="projects-data">${json}</script>`);
 writeFileSync('index.html', index);
 
-console.log(`gallery: ${items.length} tiles, ${data.projects.length} filters · home: ${featured.length} featured cards`);
+console.log(`gallery: ${items.length} tiles, ${data.projects.length} filters · home: ${data.showcase.length} showcase designs, ${withWork.length} project chips`);

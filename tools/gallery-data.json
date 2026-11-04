@@ -1,5 +1,43 @@
 {
-  "_note": "Source of truth for the gallery and the home 'Featured projects'. Images live in images/work/<key>/ (originals) and are optimized by `npm run images`. Regenerate markup with `node tools/gen-gallery.mjs`.",
+  "_note": "Source of truth for the gallery, the home showcase and the project sheets. Originals in images/work/<key>/, optimized by `npm run images`; regenerate markup with `npm run gallery`.",
+  "showcase": [
+    [
+      "food",
+      "01"
+    ],
+    [
+      "realestate",
+      "04"
+    ],
+    [
+      "ads",
+      "16"
+    ],
+    [
+      "bstudy",
+      "02"
+    ],
+    [
+      "bstudy",
+      "01"
+    ],
+    [
+      "tech",
+      "05"
+    ],
+    [
+      "ads",
+      "22"
+    ],
+    [
+      "kids",
+      "02"
+    ],
+    [
+      "innerwin",
+      "05"
+    ]
+  ],
   "projects": [
     {
       "key": "ads",
@@ -8,8 +46,6 @@
       "client": "InnerWin Academy",
       "category": "Ad Campaigns",
       "behance": "https://www.behance.net/gallery/252833343/Social-Media-Advertising-Campaigns",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "02.png",
         "03.png",
@@ -28,8 +64,6 @@
       "client": "InnerWin Academy",
       "category": "Brand Identity",
       "behance": "https://www.behance.net/gallery/251766349/Innerwin-Academy-Educational-Platform-Branding",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "02.jpg",
         "05.jpg",
@@ -48,8 +82,6 @@
       "client": "B-Study",
       "category": "Social Media",
       "behance": "https://www.behance.net/gallery/251718339/E-Learning-Platform-Social-Media-Designs",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "01.png",
         "02.jpg",
@@ -86,8 +118,6 @@
       "client": "B-Little Hands",
       "category": "Social Media",
       "behance": "https://www.behance.net/gallery/251718775/Nursery-Kids-Brand-Social-Media-Designs",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "02.jpg",
         "03.jpg",
@@ -106,8 +136,6 @@
       "client": "TMG",
       "category": "Campaign",
       "behance": "https://www.behance.net/gallery/251765553/Real-Estate-Social-Media-Campaign",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "01.jpg",
         "02.jpg",
@@ -124,8 +152,6 @@
       "client": "Egypt Store",
       "category": "Social Media",
       "behance": "https://www.behance.net/gallery/251765779/Tech-Retail-Social-Media-Designs",
-      "featured": true,
-      "cover": "cover.png",
       "images": [
         "01.jpg",
         "02.jpg",
@@ -138,11 +164,9 @@
       "key": "food",
       "label": "Food",
       "title": "Food & Restaurant Social Media Designs",
-      "client": "Food & beverage brands",
+      "client": "The Crepery & Best Juice",
       "category": "Social Media",
       "behance": "https://www.behance.net/gallery/251765359/Food-Restaurant-Social-Media-Designs",
-      "featured": false,
-      "cover": "cover.png",
       "images": [
         "01.jpg",
         "02.jpg",
@@ -156,8 +180,6 @@
       "client": "B2B campaign",
       "category": "Seasonal Campaign",
       "behance": "https://www.behance.net/gallery/251767025/Eid-Al-Adha-Social-Media-Campaign-B2B",
-      "featured": false,
-      "cover": "cover.png",
       "images": [
         "01.jpg"
       ]
@@ -169,8 +191,6 @@
       "client": "Mawhiba+",
       "category": "Brand Identity",
       "behance": null,
-      "featured": false,
-      "cover": null,
       "images": [],
       "legacy": [
         [
@@ -198,8 +218,6 @@
       "client": "Continuing Education Academy",
       "category": "Print & Promo",
       "behance": null,
-      "featured": false,
-      "cover": null,
       "images": [],
       "legacy": [
         [
