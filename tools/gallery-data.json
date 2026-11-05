@@ -1,0 +1,264 @@
+{
+  "_note": "Source of truth for the gallery, the home showcase and the project sheets. Originals in images/work/<key>/, optimized by `npm run images`; regenerate markup with `npm run gallery`.",
+  "showcase": [
+    [
+      "sgrc",
+      "01"
+    ],
+    [
+      "food",
+      "01"
+    ],
+    [
+      "ads",
+      "16"
+    ],
+    [
+      "bstudy",
+      "02"
+    ],
+    [
+      "bstudy",
+      "01"
+    ],
+    [
+      "tech",
+      "05"
+    ],
+    [
+      "ads",
+      "22"
+    ],
+    [
+      "kids",
+      "02"
+    ],
+    [
+      "innerwin",
+      "05"
+    ]
+  ],
+  "projects": [
+    {
+      "key": "sgrc",
+      "label": "SustainGRC",
+      "title": "SustainGRC — Brand & Social Media Design System",
+      "client": "SustainGRC",
+      "category": "Brand System",
+      "behance": "https://www.behance.net/gallery/258059125/SustainGRC-Brand-Social-Media-Design-System",
+      "images": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg",
+        "07.jpg",
+        "08.jpg",
+        "09.jpg",
+        "10.jpg",
+        "11.jpg",
+        "12.jpg"
+      ]
+    },
+    {
+      "key": "ads",
+      "label": "Ad Campaigns",
+      "title": "Social Media Advertising Campaigns",
+      "client": "InnerWin Academy",
+      "category": "Ad Campaigns",
+      "behance": "https://www.behance.net/gallery/252833343/Social-Media-Advertising-Campaigns",
+      "images": [
+        "02.png",
+        "03.png",
+        "07.png",
+        "10.png",
+        "14.jpg",
+        "16.png",
+        "22.png",
+        "23.jpg"
+      ]
+    },
+    {
+      "key": "innerwin",
+      "label": "InnerWin Branding",
+      "title": "InnerWin Academy — Educational Platform Branding",
+      "client": "InnerWin Academy",
+      "category": "Brand Identity",
+      "behance": "https://www.behance.net/gallery/251766349/Innerwin-Academy-Educational-Platform-Branding",
+      "images": [
+        "02.jpg",
+        "05.jpg",
+        "07.jpg",
+        "10.jpg",
+        "13.jpg",
+        "34.jpg",
+        "35.jpg",
+        "44.png"
+      ]
+    },
+    {
+      "key": "bstudy",
+      "label": "B-Study",
+      "title": "B-Study — E-Learning Platform",
+      "client": "B-Study",
+      "category": "Social Media",
+      "behance": "https://www.behance.net/gallery/251718339/E-Learning-Platform-Social-Media-Designs",
+      "images": [
+        "01.png",
+        "02.jpg",
+        "05.jpg",
+        "09.jpg",
+        "10.jpg",
+        "13.jpg",
+        "18.jpg",
+        "23.jpg"
+      ],
+      "legacy": [
+        [
+          "bstudy1",
+          "B-Study — Open Registration"
+        ],
+        [
+          "bstudy2",
+          "B-Study — Engagement Post"
+        ],
+        [
+          "bstudy3",
+          "B-Study — Visual Identity"
+        ],
+        [
+          "bstudy4",
+          "B-Study — Ready for Round 3"
+        ]
+      ]
+    },
+    {
+      "key": "kids",
+      "label": "B-Little Hands",
+      "title": "B-Little Hands — Nursery & Kids Brand",
+      "client": "B-Little Hands",
+      "category": "Social Media",
+      "behance": "https://www.behance.net/gallery/251718775/Nursery-Kids-Brand-Social-Media-Designs",
+      "images": [
+        "02.jpg",
+        "03.jpg",
+        "05.jpg",
+        "07.jpg",
+        "11.jpg",
+        "13.jpg",
+        "15.jpg",
+        "16.jpg"
+      ]
+    },
+    {
+      "key": "realestate",
+      "label": "Real Estate",
+      "title": "Real Estate Social Media Campaign",
+      "client": "TMG",
+      "category": "Campaign",
+      "behance": "https://www.behance.net/gallery/251765553/Real-Estate-Social-Media-Campaign",
+      "images": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ]
+    },
+    {
+      "key": "tech",
+      "label": "Tech Retail",
+      "title": "Tech Retail Social Media Designs",
+      "client": "Egypt Store",
+      "category": "Social Media",
+      "behance": "https://www.behance.net/gallery/251765779/Tech-Retail-Social-Media-Designs",
+      "images": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ]
+    },
+    {
+      "key": "food",
+      "label": "Food",
+      "title": "Food & Restaurant Social Media Designs",
+      "client": "The Crepery & Best Juice",
+      "category": "Social Media",
+      "behance": "https://www.behance.net/gallery/251765359/Food-Restaurant-Social-Media-Designs",
+      "images": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg"
+      ]
+    },
+    {
+      "key": "eid",
+      "label": "Miramar",
+      "title": "Eid Al-Adha Social Media Campaign — B2B",
+      "client": "Miramar Logistics",
+      "category": "Seasonal Campaign",
+      "behance": "https://www.behance.net/gallery/251767025/Eid-Al-Adha-Social-Media-Campaign-B2B",
+      "images": [
+        "01.jpg"
+      ]
+    },
+    {
+      "key": "mawhiba",
+      "label": "Mawhiba+",
+      "title": "Mawhiba+",
+      "client": "Mawhiba+",
+      "category": "Brand Identity",
+      "behance": null,
+      "images": [],
+      "legacy": [
+        [
+          "smart1",
+          "Mawhiba+ — Key Visual"
+        ],
+        [
+          "smart2",
+          "Mawhiba+ — Tiny Hands, Big Dreams"
+        ],
+        [
+          "smart3",
+          "Mawhiba+ — Learning Made Fun"
+        ],
+        [
+          "smart4",
+          "Mawhiba+ — Every Small Step"
+        ]
+      ]
+    },
+    {
+      "key": "training",
+      "label": "Training",
+      "title": "Training Courses",
+      "client": "Continuing Education Academy",
+      "category": "Print & Promo",
+      "behance": null,
+      "images": [],
+      "legacy": [
+        [
+          "training1",
+          "Training Courses — Cover"
+        ],
+        [
+          "training2",
+          "Training Courses — Brochure"
+        ],
+        [
+          "training3",
+          "Training Courses — Layout"
+        ],
+        [
+          "training4",
+          "Training Courses — Feature Spread"
+        ]
+      ]
+    }
+  ]
+}

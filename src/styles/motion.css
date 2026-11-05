@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Motion support
+   The hero copy/stage start hidden ONLY when JS is running and motion is
+   allowed. A CSS animation reveals them after 2.5s regardless, so a failed
+   or slow script can never leave the hero blank. GSAP reveals them sooner
+   and adds .motion-done, which cancels the fallback.
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  /* The character image is deliberately excluded: it is the LCP element. */
+  .js:not(.motion-done) .hero__head,
+  .js:not(.motion-done) .hero__body,
+  .js:not(.motion-done) .hero__layer {
+    visibility: hidden;
+    animation: motion-fallback 0s linear 2.5s forwards;
+  }
+}
+
+@keyframes motion-fallback {
+  to { visibility: visible; }
+}
+
+/* SplitText masks must not clip the skewed accent line or underline */
+.hero__line [class*='-mask'],
+.hero__line > div {
+  padding-right: 0.06em;
+  margin-right: -0.06em;
+}
+
+/* Scroll progress (decorative) */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: calc(var(--z-nav) + 1);
+  height: 3px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+html:not(.js) .scroll-progress {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+}

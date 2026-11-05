@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Badr Masoud — Controlled Chaos · Design tokens
+   The "control": one palette, one type scale, one grid, one spacing scale.
+   The "chaos": a short, fixed list of allowed rule-breaks (tilt, offset,
+   overlap, layer). Components may only break the grid using these tokens.
+   ========================================================================== */
+:root {
+  /* ---- Palette (approved) ---- */
+  --ink: #151613;
+  --orange: #ff5c24;
+  --olive: #343b27;
+  --cream: #f4f0e6;
+  --lime: #d8ff45;
+
+  /* ---- Derived neutrals ---- */
+  --ink-2: #1d1f1a;            /* raised surface on ink */
+  --ink-3: #262922;            /* cards / strips */
+  --olive-2: #444d33;          /* olive hover / shape tint */
+  --cream-muted: #b9b5ab;      /* secondary text on ink (AA, see style guide) */
+  --line: rgb(244 240 230 / 0.14);
+  --line-strong: rgb(244 240 230 / 0.32);
+
+  /* ---- Semantic roles ----
+     Contrast rules (WCAG 2.2):
+       ink on orange ........ OK any size  (CTA buttons: ink text, never cream)
+       lime on ink .......... OK any size
+       cream on ink/olive ... OK any size
+       orange on ink ........ OK any size
+       orange on olive ...... large text only (≥24px / ≥19px bold)
+       cream on orange, orange on cream ... NEVER for text */
+  --bg: var(--ink);
+  --surface: var(--ink-2);
+  --text: var(--cream);
+  --text-muted: var(--cream-muted);
+  --accent: var(--orange);
+  --accent-ink: var(--ink);    /* text placed on --accent */
+  --highlight: var(--lime);
+  --focus: var(--lime);
+
+  /* ---- Typography ---- */
+  --font-display: 'Anton', 'Impact', 'Arial Narrow Bold', sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-mega: clamp(3.25rem, 1.2rem + 8.6vw, 9.5rem);     /* hero headline */
+  --fs-display: clamp(2.75rem, 1.4rem + 5.6vw, 6.5rem);  /* section titles */
+  --fs-h2: clamp(2.125rem, 1.3rem + 3.4vw, 4.25rem);
+  --fs-h3: clamp(1.375rem, 1.1rem + 1.1vw, 2rem);
+  --fs-lead: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3125rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  --lh-display: 0.9;
+  --lh-tight: 1.1;
+  --lh-body: 1.6;
+  --track-display: 0.005em;
+  --track-label: 0.18em;
+
+  /* ---- Spacing (4px base) ---- */
+  --sp-1: 0.25rem;  --sp-2: 0.5rem;  --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem;   --sp-6: 2rem;    --sp-7: 3rem;    --sp-8: 4rem;
+  --sp-9: 6rem;     --sp-10: 8rem;
+  --section-y: clamp(4rem, 2.5rem + 6vw, 8rem);
+
+  /* ---- Grid ---- */
+  --container: 1440px;
+  --gutter: clamp(16px, 4vw, 56px);   /* page side padding; 16px min on phones */
+  --cols: 12;
+  --col-gap: clamp(12px, 1.6vw, 24px);
+
+  /* ---- Shape ---- */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --border: 1.5px;
+
+  /* ---- Chaos rules (the only allowed grid-breaks) ---- */
+  --tilt-xs: -1.5deg;
+  --tilt-sm: 3deg;
+  --tilt-md: -6deg;
+  --tilt-lg: 12deg;
+  --skew-accent: -8deg;          /* faux-italic accent line (Anton has no italic) */
+  --offset-sm: 0.5rem;
+  --offset-md: 1.5rem;
+  --offset-lg: clamp(2rem, 4vw, 4.5rem);
+  --overlap: clamp(-3rem, -4vw, -1rem);  /* negative margin for intentional overlaps */
+  --shadow-hard: 6px 6px 0 0;    /* sticker shadow; colour set per use */
+
+  /* ---- Layers ---- */
+  --z-bg: 0;
+  --z-shape: 1;
+  --z-character: 2;
+  --z-type: 3;
+  --z-sticker: 4;
+  --z-nav: 50;
+  --z-overlay: 100;
+
+  /* ---- Motion ---- */
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 600ms;
+  --dur-4: 900ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snap: cubic-bezier(0.7, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms;
+    --dur-2: 0ms;
+    --dur-3: 0ms;
+    --dur-4: 0ms;
+  }
+}

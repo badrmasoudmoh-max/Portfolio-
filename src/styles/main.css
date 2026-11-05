@@ -1,0 +1,7 @@
+/* Controlled Chaos design system entry. Imported by redesigned pages only;
+   the current index.html / gallery.html still use css/style.css until their
+   phases are rebuilt. */
+@import './fonts.css';
+@import './tokens.css';
+@import './base.css';
+@import './components.css';

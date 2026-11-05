@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Style Guide — Controlled Chaos</title>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <style>
+    /* Style-guide-only layout. Dev page: not part of the production build. */
+    .sg-section { border-top: 1px solid var(--line); padding-block: var(--sp-8); }
+    .sg-title { display: flex; align-items: baseline; gap: var(--sp-4); margin-bottom: var(--sp-6); }
+    .sg-grid { display: grid; gap: var(--sp-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+    .swatch { border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+    .swatch__chip { height: 120px; }
+    .swatch__meta { padding: var(--sp-3) var(--sp-4); font-size: var(--fs-small); }
+    .swatch__meta strong { display: block; font-size: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+    th, td { text-align: left; padding: var(--sp-3) var(--sp-2); border-bottom: 1px solid var(--line); vertical-align: middle; }
+    .sample { display: inline-block; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); font-weight: 700; }
+    .pass { color: var(--lime); } .large { color: var(--orange); } .fail { color: #ff8f8f; }
+    .stack > * + * { margin-top: var(--sp-5); }
+    .row { display: flex; flex-wrap: wrap; gap: var(--sp-4); align-items: center; }
+    .stage { position: relative; min-height: 360px; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+    .spec { font-size: var(--fs-small); color: var(--text-muted); }
+    .space-bar { height: 14px; background: var(--orange); }
+    code { font-size: 0.85em; color: var(--lime); }
+    ul.rules { padding-left: 1.2em; display: grid; gap: var(--sp-2); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main" class="container">
+    <header class="section">
+      <p class="eyebrow">Design system · v0.1 · dev only</p>
+      <h1 class="display display--mega" style="margin-top: var(--sp-4)">
+        Controlled<br><span class="accent">Chaos.</span>
+      </h1>
+      <p class="lead muted" style="margin-top: var(--sp-5)">
+        Tokens, type and primitives for the Badr Masoud portfolio redesign. Everything on this page is real HTML/CSS — no images.
+      </p>
+    </header>
+
+    <!-- Palette -->
+    <section class="sg-section" aria-labelledby="sg-palette">
+      <div class="sg-title"><span class="section-index">01</span><h2 id="sg-palette" class="h2">Palette</h2></div>
+      <div class="sg-grid" id="swatches"></div>
+    </section>
+
+    <!-- Contrast -->
+    <section class="sg-section" aria-labelledby="sg-contrast">
+      <div class="sg-title"><span class="section-index">02</span><h2 id="sg-contrast" class="h2">Contrast rules</h2></div>
+      <p class="muted" style="margin-bottom: var(--sp-5)">Computed live from the tokens (WCAG 2.2). AA normal text ≥ 4.5, AA large text ≥ 3.</p>
+      <div style="overflow-x: auto"><table id="contrast"><thead><tr><th>Text</th><th>Background</th><th>Sample</th><th>Ratio</th><th>Use</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <!-- Type -->
+    <section class="sg-section" aria-labelledby="sg-type">
+      <div class="sg-title"><span class="section-index">03</span><h2 id="sg-type" class="h2">Typography</h2></div>
+      <div class="stack">
+        <div>
+          <p class="spec">Mega · Anton · <code>--fs-mega</code> · accent line = skewX(<code>--skew-accent</code>)</p>
+          <p class="display display--mega">I make<br><span class="accent">visual noise.</span><br>That matters.</p>
+          <svg class="brush-underline" viewBox="0 0 400 24" preserveAspectRatio="none" style="max-width: 420px" aria-hidden="true">
+            <path d="M4 16 C 80 6, 160 4, 240 10 S 360 18, 396 8" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div><p class="spec">Display · <code>--fs-display</code></p><p class="display">Featured projects.</p></div>
+        <div><p class="spec">H2 · <code>--fs-h2</code></p><p class="h2">The human behind the pixels.</p></div>
+        <div><p class="spec">H3 · Inter 750 · <code>--fs-h3</code></p><p class="h3">Social Media Design</p></div>
+        <div><p class="spec">Lead · Inter · <code>--fs-lead</code></p><p class="lead">Graphic designer crafting bold visuals, social campaigns, and creative identities.</p></div>
+        <div><p class="spec">Body · Inter · <code>--fs-body</code></p><p style="max-width: 65ch">I specialize in translating unique brand identities into engaging, on-brand visuals across sectors like education, food &amp; beverage, real estate, and retail.</p></div>
+        <div class="row"><span class="eyebrow">Independent graphic designer / Egypt</span><span class="section-index">02</span><span class="eyebrow" style="color: var(--cream)">/ Selected work</span></div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="sg-section" aria-labelledby="sg-buttons">
+      <div class="sg-title"><span class="section-index">04</span><h2 id="sg-buttons" class="h2">Buttons &amp; UI</h2></div>
+      <div class="row">
+        <a class="btn btn--primary" href="#sg-buttons">Explore my work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#sg-buttons">Let's talk
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <span class="status-pill">Available for<br>creative projects</span>
+      </div>
+      <p class="spec" style="margin-top: var(--sp-5)">Hover = hard “sticker” shadow (lime on primary, orange on ghost). Tab to see the lime focus ring. Min height 48px.</p>
+    </section>
+
+    <!-- Chaos primitives -->
+    <section class="sg-section" aria-labelledby="sg-chaos">
+      <div class="sg-title"><span class="section-index">05</span><h2 id="sg-chaos" class="h2">Chaos primitives</h2></div>
+      <div class="stage grid-lines grain" aria-hidden="true">
+        <div class="layer shape-slab shape-slab--grain" style="width: 46%; height: 70%; left: 8%; top: 12%;"></div>
+        <div class="layer shape-circle" style="width: 38%; max-width: 300px; right: 16%; top: 10%;"></div>
+        <div class="layer torn" style="width: 34%; height: 34%; left: 30%; bottom: 6%; background: var(--cream); transform: rotate(var(--tilt-xs));"></div>
+        <div class="layer" style="right: 6%; bottom: 14%;"><span class="sticker" style="font-size: 1.4rem">Ideas<br>design<br>impact</span></div>
+        <div class="layer swatch-strip" style="left: 4%; bottom: 8%;"><span style="background: var(--orange)"></span><span style="background: var(--olive)"></span><span style="background: var(--ink)"></span><span style="background: var(--lime)"></span></div>
+      </div>
+      <p class="spec" style="margin-top: var(--sp-4)">Olive slab + grain, orange circle, torn-paper clip, sticker, swatch strip, grid-line texture. All CSS/SVG. The character layer will sit at <code>--z-character</code> between shapes and type.</p>
+      <h3 class="h3" style="margin-top: var(--sp-7)">The rules</h3>
+      <ul class="rules muted" style="margin-top: var(--sp-4)">
+        <li>Everything aligns to the 12-column grid — <em>except</em> elements explicitly using a chaos token.</li>
+        <li>Tilt only with <code>--tilt-xs / sm / md / lg</code> (−1.5°, 3°, −6°, 12°). Max two tilted elements per viewport.</li>
+        <li>One accent line per headline (orange, skewed). Never orange text on cream or cream text on orange.</li>
+        <li>Overlaps use <code>--overlap</code> and never cover headline words, buttons or nav.</li>
+        <li>Layer order: bg → shapes → character → type → stickers → UI.</li>
+        <li>Texture opacity ≤ 8%. Motion respects <code>prefers-reduced-motion</code>.</li>
+      </ul>
+    </section>
+
+    <!-- Spacing -->
+    <section class="sg-section" aria-labelledby="sg-space">
+      <div class="sg-title"><span class="section-index">06</span><h2 id="sg-space" class="h2">Spacing</h2></div>
+      <div class="stack" id="spacing"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    const css = getComputedStyle(document.documentElement);
+    const tok = (n) => css.getPropertyValue(n).trim();
+    const colors = [
+      ['--ink', 'Dark ink'], ['--orange', 'Electric orange'], ['--olive', 'Deep olive'],
+      ['--cream', 'Warm cream'], ['--lime', 'Acid lime'], ['--ink-2', 'Ink 2 (surface)'],
+      ['--ink-3', 'Ink 3 (cards)'], ['--cream-muted', 'Cream muted (secondary text)'],
+    ];
+    document.getElementById('swatches').innerHTML = colors.map(([v, label]) =>
+      `<div class="swatch"><div class="swatch__chip" style="background:var(${v})"></div>
+       <div class="swatch__meta"><strong>${label}</strong><code>${v}</code> · ${tok(v).toUpperCase()}</div></div>`).join('');
+
+    const lum = (hex) => {
+      const n = parseInt(hex.replace('#', ''), 16);
+      return [n >> 16, (n >> 8) & 255, n & 255].map((c) => { c /= 255; return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; })
+        .reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0);
+    };
+    const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+    const pairs = [
+      ['--ink', '--orange'], ['--lime', '--ink'], ['--cream', '--ink'], ['--orange', '--ink'], ['--cream-muted', '--ink'],
+      ['--cream', '--olive'], ['--lime', '--olive'], ['--orange', '--olive'], ['--cream', '--ink-3'],
+      ['--ink', '--lime'], ['--ink', '--cream'], ['--cream', '--orange'], ['--orange', '--cream'],
+    ];
+    document.querySelector('#contrast tbody').innerHTML = pairs.map(([fg, bg]) => {
+      const r = ratio(tok(fg), tok(bg));
+      const [cls, use] = r >= 4.5 ? ['pass', 'Any text'] : r >= 3 ? ['large', 'Large text / UI only'] : ['fail', 'Never for text'];
+      return `<tr><td><code>${fg}</code></td><td><code>${bg}</code></td>
+        <td><span class="sample" style="color:var(${fg});background:var(${bg})">Aa Sample</span></td>
+        <td>${r.toFixed(2)}:1</td><td class="${cls}">${use}</td></tr>`;
+    }).join('');
+
+    document.getElementById('spacing').innerHTML = ['--sp-1','--sp-2','--sp-3','--sp-4','--sp-5','--sp-6','--sp-7','--sp-8','--sp-9','--sp-10']
+      .map((v) => `<div class="row"><code style="width:7ch">${v}</code><span class="spec" style="width:6ch">${tok(v)}</span><div class="space-bar" style="width:var(${v})"></div></div>`).join('');
+  </script>
+</body>
+</html>

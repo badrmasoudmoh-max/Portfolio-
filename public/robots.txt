@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badrmasoudmoh-max.github.io/Portfolio-/sitemap.xml

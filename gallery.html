@@ -1,125 +1,836 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery — Badr Mohamed</title>
-    <meta name="description" content="Design gallery of Badr Mohamed — Social Media Campaigns, Brand Identity, and Print Design.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gallery.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Work — Badr Masoud</title>
+  <meta name="description" content="Design gallery of Badr Masoud — social media campaigns, brand identity, and print design for B-Study, Mawhiba+ and training courses.">
+  <link rel="canonical" href="https://badrmasoudmoh-max.github.io/Portfolio-/gallery.html">
+  <meta name="theme-color" content="#151613">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Badr Masoud">
+  <meta property="og:title" content="Selected Work — Badr Masoud">
+  <meta property="og:description" content="Social media campaigns, brand identities, and print designs.">
+  <meta property="og:url" content="https://badrmasoudmoh-max.github.io/Portfolio-/gallery.html">
+  <meta property="og:image" content="https://badrmasoudmoh-max.github.io/Portfolio-/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/src/styles/gallery-page.css">
 </head>
-<body class="gallery-page">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"><span class="cursor-label" id="cursor-label"></span></div>
+  <header class="site-header site-header--solid">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Badr Masoud — home">BADR<span aria-hidden="true">*</span></a>
 
-    <!-- Navigation -->
-    <header class="header glass-panel-nav scrolled">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Badr<span class="gradient-text">.</span></a>
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-arrow-left" style="margin-right:.4rem"></i> Back to Portfolio</a></li>
-                </ul>
-            </nav>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-            </div>
-        </div>
-    </header>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
 
-    <main class="gallery-main">
-        <!-- Gallery Header -->
-        <div class="gallery-header">
-            <h1 class="gallery-title">Selected <span class="gradient-text">Work</span></h1>
-            <p class="gallery-desc">A curated collection of social media campaigns, brand identities, and print designs.</p>
-            <!-- Filter -->
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="bstudy">B-Study</button>
-                <button class="filter-btn" data-filter="mawhiba">Mawhiba+</button>
-                <button class="filter-btn" data-filter="training">Training</button>
-            </div>
-        </div>
-
-        <!-- Bento Grid -->
-        <div class="bento-grid" id="bento-grid">
-            <!-- B-Study -->
-            <div class="bento-item bento-wide reveal" data-group="bstudy" data-index="0" data-category="Social Media Campaign" data-title="B-Study — Open Registration" id="bstudy">
-                <img src="images/bstudy1.jpg" alt="B-Study Design 1" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Social Media</span><span class="bento-title">B-Study</span></div>
-            </div>
-            <div class="bento-item bento-tall reveal" data-group="bstudy" data-index="1" data-category="Social Media Campaign" data-title="B-Study — Engagement Post">
-                <img src="images/bstudy2.jpg" alt="B-Study Design 2" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Social Media</span><span class="bento-title">B-Study</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="bstudy" data-index="2" data-category="Campaign" data-title="B-Study — Visual Identity">
-                <img src="images/bstudy3.jpg" alt="B-Study Design 3" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Campaign</span><span class="bento-title">B-Study</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="bstudy" data-index="3" data-category="Campaign" data-title="B-Study — Ready for Round 3">
-                <img src="images/bstudy4.jpg" alt="B-Study Design 4" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Campaign</span><span class="bento-title">B-Study</span></div>
-            </div>
-            <!-- Mawhiba+ -->
-            <div class="bento-item bento-tall reveal" data-group="mawhiba" data-index="4" data-category="Brand Identity" data-title="Mawhiba+ — Key Visual" id="mawhiba">
-                <img src="images/smart1.jpg" alt="Mawhiba+ Design 1" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Brand Identity</span><span class="bento-title">Mawhiba+</span></div>
-            </div>
-            <div class="bento-item bento-wide reveal" data-group="mawhiba" data-index="5" data-category="Brand Identity" data-title="Mawhiba+ — Tiny Hands, Big Dreams">
-                <img src="images/smart2.jpg" alt="Mawhiba+ Design 2" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Brand Identity</span><span class="bento-title">Mawhiba+</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="mawhiba" data-index="6" data-category="Education" data-title="Mawhiba+ — Learning Made Fun">
-                <img src="images/smart3.jpg" alt="Mawhiba+ Design 3" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Education</span><span class="bento-title">Mawhiba+</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="mawhiba" data-index="7" data-category="Education" data-title="Mawhiba+ — Every Small Step">
-                <img src="images/smart4.jpg" alt="Mawhiba+ Design 4" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Education</span><span class="bento-title">Mawhiba+</span></div>
-            </div>
-            <!-- Training -->
-            <div class="bento-item bento-wide reveal" data-group="training" data-index="8" data-category="Print & Promo" data-title="Training Courses — Cover" id="training">
-                <img src="images/training1.jpg" alt="Training Design 1" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Print</span><span class="bento-title">Training Courses</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="training" data-index="9" data-category="Print & Promo" data-title="Training Courses — Brochure">
-                <img src="images/training2.jpg" alt="Training Design 2" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Print</span><span class="bento-title">Training Courses</span></div>
-            </div>
-            <div class="bento-item reveal" data-group="training" data-index="10" data-category="Promo" data-title="Training Courses — Layout">
-                <img src="images/training3.jpg" alt="Training Design 3" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Promo</span><span class="bento-title">Training Courses</span></div>
-            </div>
-            <div class="bento-item bento-tall reveal" data-group="training" data-index="11" data-category="Promo" data-title="Training Courses — Feature Spread">
-                <img src="images/training4.jpg" alt="Training Design 4" loading="lazy">
-                <div class="bento-overlay"><span class="bento-cat">Promo</span><span class="bento-title">Training Courses</span></div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer" style="margin-top:4rem">
-        <div class="footer-bottom"><p>&copy; 2025 Badr Mohamed. No templates were harmed.</p></div>
-    </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
-        <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
-        <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-        <div class="lightbox-container" id="lightbox-container">
-            <img class="lightbox-img" id="lightbox-img" src="" alt="" draggable="false">
-        </div>
-        <div class="lightbox-info"><span class="lightbox-cat" id="lightbox-cat"></span><span class="lightbox-title" id="lightbox-title"></span><span class="lightbox-counter" id="lightbox-counter"></span></div>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="index.html#work" aria-current="page">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a class="site-nav__cv" href="cv/Badr-Mohamed-Masoud-CV.pdf" download>CV<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span class="visually-hidden"> (PDF download)</span></a></li>
+        </ul>
+        <p class="status-pill site-nav__status">Available for<br>creative projects</p>
+      </nav>
     </div>
+  </header>
 
-    <script src="js/script.js"></script>
-    <script src="js/gallery.js"></script>
+  <main id="main" class="gallery">
+    <div class="container">
+      <a class="back-link" href="index.html#work">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to portfolio
+      </a>
+
+      <div class="gallery__head">
+        <p class="eyebrow"><span class="section-index">02</span> / Gallery</p>
+        <h1 class="display display--mega">Selected <span class="accent">work.</span></h1>
+        <p class="lead muted">A curated collection of social media campaigns, brand identities, and print designs.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <!-- gen:filters -->
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span class="filter__n">71</span></button>
+        <button class="filter" type="button" data-filter="sgrc" aria-pressed="false">SustainGRC <span class="filter__n">12</span></button>
+        <button class="filter" type="button" data-filter="ads" aria-pressed="false">Ad Campaigns <span class="filter__n">8</span></button>
+        <button class="filter" type="button" data-filter="innerwin" aria-pressed="false">InnerWin Branding <span class="filter__n">8</span></button>
+        <button class="filter" type="button" data-filter="bstudy" aria-pressed="false">B-Study <span class="filter__n">12</span></button>
+        <button class="filter" type="button" data-filter="kids" aria-pressed="false">B-Little Hands <span class="filter__n">8</span></button>
+        <button class="filter" type="button" data-filter="realestate" aria-pressed="false">Real Estate <span class="filter__n">6</span></button>
+        <button class="filter" type="button" data-filter="tech" aria-pressed="false">Tech Retail <span class="filter__n">5</span></button>
+        <button class="filter" type="button" data-filter="food" aria-pressed="false">Food <span class="filter__n">3</span></button>
+        <button class="filter" type="button" data-filter="eid" aria-pressed="false">Miramar <span class="filter__n">1</span></button>
+        <button class="filter" type="button" data-filter="mawhiba" aria-pressed="false">Mawhiba+ <span class="filter__n">4</span></button>
+        <button class="filter" type="button" data-filter="training" aria-pressed="false">Training <span class="filter__n">4</span></button>
+        <!-- /gen:filters -->
+      </div>
+      <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+
+      <ul class="bento" id="bento" role="list">
+          <!-- gen:tiles -->
+          <li class="tile tile--wide" id="sgrc" data-group="sgrc" data-name="w-sgrc-01" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 01">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 01 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-01-480.avif 480w, src/assets/img/w-sgrc-01-800.avif 800w, src/assets/img/w-sgrc-01-1092.avif 1092w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-01-480.webp 480w, src/assets/img/w-sgrc-01-800.webp 800w, src/assets/img/w-sgrc-01-1092.webp 1092w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-sgrc-01-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-02" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 02">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 02 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-02-480.avif 480w, src/assets/img/w-sgrc-02-800.avif 800w, src/assets/img/w-sgrc-02-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-02-480.webp 480w, src/assets/img/w-sgrc-02-800.webp 800w, src/assets/img/w-sgrc-02-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-02-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-03" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 03">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 03 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-03-480.avif 480w, src/assets/img/w-sgrc-03-800.avif 800w, src/assets/img/w-sgrc-03-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-03-480.webp 480w, src/assets/img/w-sgrc-03-800.webp 800w, src/assets/img/w-sgrc-03-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-03-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-04" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 04">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 04 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-04-480.avif 480w, src/assets/img/w-sgrc-04-800.avif 800w, src/assets/img/w-sgrc-04-1122.avif 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-04-480.webp 480w, src/assets/img/w-sgrc-04-800.webp 800w, src/assets/img/w-sgrc-04-1122.webp 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-04-800.jpg" width="1122" height="1402" alt="SustainGRC — Brand &amp; Social Media Design System — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-05" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 05">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 05 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-05-480.avif 480w, src/assets/img/w-sgrc-05-800.avif 800w, src/assets/img/w-sgrc-05-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-05-480.webp 480w, src/assets/img/w-sgrc-05-800.webp 800w, src/assets/img/w-sgrc-05-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-05-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="sgrc" data-name="w-sgrc-06" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 06">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 06 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-06-480.avif 480w, src/assets/img/w-sgrc-06-800.avif 800w, src/assets/img/w-sgrc-06-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-06-480.webp 480w, src/assets/img/w-sgrc-06-800.webp 800w, src/assets/img/w-sgrc-06-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-06-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-07" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 07">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 07 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-07-480.avif 480w, src/assets/img/w-sgrc-07-800.avif 800w, src/assets/img/w-sgrc-07-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-07-480.webp 480w, src/assets/img/w-sgrc-07-800.webp 800w, src/assets/img/w-sgrc-07-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-07-800.jpg" width="1092" height="1440" alt="SustainGRC — Brand &amp; Social Media Design System — 07" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-08" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 08">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 08 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-08-480.avif 480w, src/assets/img/w-sgrc-08-800.avif 800w, src/assets/img/w-sgrc-08-1122.avif 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-08-480.webp 480w, src/assets/img/w-sgrc-08-800.webp 800w, src/assets/img/w-sgrc-08-1122.webp 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-08-800.jpg" width="1122" height="1402" alt="SustainGRC — Brand &amp; Social Media Design System — 08" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-09" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 09">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 09 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-09-480.avif 480w, src/assets/img/w-sgrc-09-800.avif 800w, src/assets/img/w-sgrc-09-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-09-480.webp 480w, src/assets/img/w-sgrc-09-800.webp 800w, src/assets/img/w-sgrc-09-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-09-800.jpg" width="1200" height="1696" alt="SustainGRC — Brand &amp; Social Media Design System — 09" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" data-group="sgrc" data-name="w-sgrc-10" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 10">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 10 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-10-480.avif 480w, src/assets/img/w-sgrc-10-800.avif 800w, src/assets/img/w-sgrc-10-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-10-480.webp 480w, src/assets/img/w-sgrc-10-800.webp 800w, src/assets/img/w-sgrc-10-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-sgrc-10-800.jpg" width="1200" height="1696" alt="SustainGRC — Brand &amp; Social Media Design System — 10" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-11" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 11">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 11 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-11-480.avif 480w, src/assets/img/w-sgrc-11-800.avif 800w, src/assets/img/w-sgrc-11-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-11-480.webp 480w, src/assets/img/w-sgrc-11-800.webp 800w, src/assets/img/w-sgrc-11-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-11-800.jpg" width="1200" height="849" alt="SustainGRC — Brand &amp; Social Media Design System — 11" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="sgrc" data-name="w-sgrc-12" data-category="Brand System" data-title="SustainGRC — Brand &amp; Social Media Design System — 12">
+            <button class="tile__btn" type="button" aria-label="View SustainGRC — Brand &amp; Social Media Design System — 12 (Brand System)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-sgrc-12-480.avif 480w, src/assets/img/w-sgrc-12-800.avif 800w, src/assets/img/w-sgrc-12-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-sgrc-12-480.webp 480w, src/assets/img/w-sgrc-12-800.webp 800w, src/assets/img/w-sgrc-12-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-sgrc-12-800.jpg" width="1200" height="849" alt="SustainGRC — Brand &amp; Social Media Design System — 12" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand System</span><span class="tile__title">SustainGRC</span></span>
+            </button>
+          </li>
+          <li class="tile" id="ads" data-group="ads" data-name="w-ads-02" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 01">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 01 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-02-480.avif 480w, src/assets/img/w-ads-02-800.avif 800w, src/assets/img/w-ads-02-1122.avif 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-02-480.webp 480w, src/assets/img/w-ads-02-800.webp 800w, src/assets/img/w-ads-02-1122.webp 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-02-800.jpg" width="1122" height="1402" alt="Social Media Advertising Campaigns — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="ads" data-name="w-ads-03" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 02">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 02 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-03-480.avif 480w, src/assets/img/w-ads-03-800.avif 800w, src/assets/img/w-ads-03-1122.avif 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-03-480.webp 480w, src/assets/img/w-ads-03-800.webp 800w, src/assets/img/w-ads-03-1122.webp 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-03-800.jpg" width="1122" height="1402" alt="Social Media Advertising Campaigns — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="ads" data-name="w-ads-07" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 03">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 03 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-07-480.avif 480w, src/assets/img/w-ads-07-800.avif 800w, src/assets/img/w-ads-07-1088.avif 1088w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-07-480.webp 480w, src/assets/img/w-ads-07-800.webp 800w, src/assets/img/w-ads-07-1088.webp 1088w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-07-800.jpg" width="1088" height="1445" alt="Social Media Advertising Campaigns — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="ads" data-name="w-ads-10" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 04">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 04 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-10-480.avif 480w, src/assets/img/w-ads-10-800.avif 800w, src/assets/img/w-ads-10-1123.avif 1123w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-10-480.webp 480w, src/assets/img/w-ads-10-800.webp 800w, src/assets/img/w-ads-10-1123.webp 1123w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-10-800.jpg" width="1123" height="1401" alt="Social Media Advertising Campaigns — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="ads" data-name="w-ads-14" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 05">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 05 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-14-480.avif 480w, src/assets/img/w-ads-14-800.avif 800w, src/assets/img/w-ads-14-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-14-480.webp 480w, src/assets/img/w-ads-14-800.webp 800w, src/assets/img/w-ads-14-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-14-800.jpg" width="1200" height="1200" alt="Social Media Advertising Campaigns — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="ads" data-name="w-ads-16" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 06">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 06 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-16-480.avif 480w, src/assets/img/w-ads-16-800.avif 800w, src/assets/img/w-ads-16-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-16-480.webp 480w, src/assets/img/w-ads-16-800.webp 800w, src/assets/img/w-ads-16-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-16-800.jpg" width="1200" height="1200" alt="Social Media Advertising Campaigns — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" data-group="ads" data-name="w-ads-22" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 07">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 07 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-22-480.avif 480w, src/assets/img/w-ads-22-800.avif 800w, src/assets/img/w-ads-22-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-22-480.webp 480w, src/assets/img/w-ads-22-800.webp 800w, src/assets/img/w-ads-22-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-ads-22-800.jpg" width="1200" height="1200" alt="Social Media Advertising Campaigns — 07" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="ads" data-name="w-ads-23" data-category="Ad Campaigns" data-title="Social Media Advertising Campaigns — 08">
+            <button class="tile__btn" type="button" aria-label="View Social Media Advertising Campaigns — 08 (Ad Campaigns)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-ads-23-480.avif 480w, src/assets/img/w-ads-23-800.avif 800w, src/assets/img/w-ads-23-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-ads-23-480.webp 480w, src/assets/img/w-ads-23-800.webp 800w, src/assets/img/w-ads-23-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-ads-23-800.jpg" width="1200" height="1200" alt="Social Media Advertising Campaigns — 08" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Ad Campaigns</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" id="innerwin" data-group="innerwin" data-name="w-innerwin-02" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 01">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 01 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-02-480.avif 480w, src/assets/img/w-innerwin-02-800.avif 800w, src/assets/img/w-innerwin-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-02-480.webp 480w, src/assets/img/w-innerwin-02-800.webp 800w, src/assets/img/w-innerwin-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-02-800.jpg" width="1200" height="1500" alt="InnerWin Academy — Educational Platform Branding — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="innerwin" data-name="w-innerwin-05" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 02">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 02 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-05-480.avif 480w, src/assets/img/w-innerwin-05-800.avif 800w, src/assets/img/w-innerwin-05-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-05-480.webp 480w, src/assets/img/w-innerwin-05-800.webp 800w, src/assets/img/w-innerwin-05-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-05-800.jpg" width="1200" height="1500" alt="InnerWin Academy — Educational Platform Branding — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="innerwin" data-name="w-innerwin-07" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 03">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 03 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-07-480.avif 480w, src/assets/img/w-innerwin-07-800.avif 800w, src/assets/img/w-innerwin-07-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-07-480.webp 480w, src/assets/img/w-innerwin-07-800.webp 800w, src/assets/img/w-innerwin-07-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-07-800.jpg" width="1200" height="1499" alt="InnerWin Academy — Educational Platform Branding — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="innerwin" data-name="w-innerwin-10" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 04">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 04 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-10-480.avif 480w, src/assets/img/w-innerwin-10-800.avif 800w, src/assets/img/w-innerwin-10-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-10-480.webp 480w, src/assets/img/w-innerwin-10-800.webp 800w, src/assets/img/w-innerwin-10-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-10-800.jpg" width="1200" height="1500" alt="InnerWin Academy — Educational Platform Branding — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="innerwin" data-name="w-innerwin-13" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 05">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 05 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-13-480.avif 480w, src/assets/img/w-innerwin-13-800.avif 800w, src/assets/img/w-innerwin-13-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-13-480.webp 480w, src/assets/img/w-innerwin-13-800.webp 800w, src/assets/img/w-innerwin-13-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-13-800.jpg" width="1200" height="1200" alt="InnerWin Academy — Educational Platform Branding — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="innerwin" data-name="w-innerwin-34" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 06">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 06 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-34-480.avif 480w, src/assets/img/w-innerwin-34-800.avif 800w, src/assets/img/w-innerwin-34-1092.avif 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-34-480.webp 480w, src/assets/img/w-innerwin-34-800.webp 800w, src/assets/img/w-innerwin-34-1092.webp 1092w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-34-800.jpg" width="1092" height="1440" alt="InnerWin Academy — Educational Platform Branding — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="innerwin" data-name="w-innerwin-35" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 07">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 07 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-35-480.avif 480w, src/assets/img/w-innerwin-35-800.avif 800w, src/assets/img/w-innerwin-35-1024.avif 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-35-480.webp 480w, src/assets/img/w-innerwin-35-800.webp 800w, src/assets/img/w-innerwin-35-1024.webp 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-innerwin-35-800.jpg" width="1024" height="1536" alt="InnerWin Academy — Educational Platform Branding — 07" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" data-group="innerwin" data-name="w-innerwin-44" data-category="Brand Identity" data-title="InnerWin Academy — Educational Platform Branding — 08">
+            <button class="tile__btn" type="button" aria-label="View InnerWin Academy — Educational Platform Branding — 08 (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-innerwin-44-480.avif 480w, src/assets/img/w-innerwin-44-800.avif 800w, src/assets/img/w-innerwin-44-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-innerwin-44-480.webp 480w, src/assets/img/w-innerwin-44-800.webp 800w, src/assets/img/w-innerwin-44-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-innerwin-44-800.jpg" width="1200" height="1200" alt="InnerWin Academy — Educational Platform Branding — 08" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">InnerWin Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" id="bstudy" data-group="bstudy" data-name="w-bstudy-01" data-category="Social Media" data-title="B-Study — E-Learning Platform — 01">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 01 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-01-480.avif 480w, src/assets/img/w-bstudy-01-800.avif 800w, src/assets/img/w-bstudy-01-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-01-480.webp 480w, src/assets/img/w-bstudy-01-800.webp 800w, src/assets/img/w-bstudy-01-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-01-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-02" data-category="Social Media" data-title="B-Study — E-Learning Platform — 02">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 02 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-02-480.avif 480w, src/assets/img/w-bstudy-02-800.avif 800w, src/assets/img/w-bstudy-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-02-480.webp 480w, src/assets/img/w-bstudy-02-800.webp 800w, src/assets/img/w-bstudy-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-02-800.jpg" width="1200" height="1499" alt="B-Study — E-Learning Platform — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-05" data-category="Social Media" data-title="B-Study — E-Learning Platform — 03">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 03 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-05-480.avif 480w, src/assets/img/w-bstudy-05-800.avif 800w, src/assets/img/w-bstudy-05-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-05-480.webp 480w, src/assets/img/w-bstudy-05-800.webp 800w, src/assets/img/w-bstudy-05-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-05-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-09" data-category="Social Media" data-title="B-Study — E-Learning Platform — 04">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 04 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-09-480.avif 480w, src/assets/img/w-bstudy-09-800.avif 800w, src/assets/img/w-bstudy-09-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-09-480.webp 480w, src/assets/img/w-bstudy-09-800.webp 800w, src/assets/img/w-bstudy-09-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-09-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="bstudy" data-name="w-bstudy-10" data-category="Social Media" data-title="B-Study — E-Learning Platform — 05">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 05 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-10-480.avif 480w, src/assets/img/w-bstudy-10-800.avif 800w, src/assets/img/w-bstudy-10-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-10-480.webp 480w, src/assets/img/w-bstudy-10-800.webp 800w, src/assets/img/w-bstudy-10-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-10-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-13" data-category="Social Media" data-title="B-Study — E-Learning Platform — 06">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 06 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-13-480.avif 480w, src/assets/img/w-bstudy-13-800.avif 800w, src/assets/img/w-bstudy-13-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-13-480.webp 480w, src/assets/img/w-bstudy-13-800.webp 800w, src/assets/img/w-bstudy-13-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-13-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-18" data-category="Social Media" data-title="B-Study — E-Learning Platform — 07">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 07 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-18-480.avif 480w, src/assets/img/w-bstudy-18-800.avif 800w, src/assets/img/w-bstudy-18-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-18-480.webp 480w, src/assets/img/w-bstudy-18-800.webp 800w, src/assets/img/w-bstudy-18-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-18-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 07" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="w-bstudy-23" data-category="Social Media" data-title="B-Study — E-Learning Platform — 08">
+            <button class="tile__btn" type="button" aria-label="View B-Study — E-Learning Platform — 08 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-bstudy-23-480.avif 480w, src/assets/img/w-bstudy-23-800.avif 800w, src/assets/img/w-bstudy-23-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-bstudy-23-480.webp 480w, src/assets/img/w-bstudy-23-800.webp 800w, src/assets/img/w-bstudy-23-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-bstudy-23-800.jpg" width="1200" height="1200" alt="B-Study — E-Learning Platform — 08" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" data-group="bstudy" data-name="bstudy1" data-category="Social Media" data-title="B-Study — Open Registration">
+            <button class="tile__btn" type="button" aria-label="View B-Study — Open Registration (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/bstudy1-480.avif 480w, src/assets/img/bstudy1-800.avif 800w, src/assets/img/bstudy1-1080.avif 1080w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/bstudy1-480.webp 480w, src/assets/img/bstudy1-800.webp 800w, src/assets/img/bstudy1-1080.webp 1080w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/bstudy1-800.jpg" width="1080" height="1080" alt="B-Study — Open Registration" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="bstudy2" data-category="Social Media" data-title="B-Study — Engagement Post">
+            <button class="tile__btn" type="button" aria-label="View B-Study — Engagement Post (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/bstudy2-480.avif 480w, src/assets/img/bstudy2-800.avif 800w, src/assets/img/bstudy2-1200.avif 1200w, src/assets/img/bstudy2-1300.avif 1300w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/bstudy2-480.webp 480w, src/assets/img/bstudy2-800.webp 800w, src/assets/img/bstudy2-1200.webp 1200w, src/assets/img/bstudy2-1300.webp 1300w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/bstudy2-800.jpg" width="1300" height="1300" alt="B-Study — Engagement Post" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="bstudy3" data-category="Social Media" data-title="B-Study — Visual Identity">
+            <button class="tile__btn" type="button" aria-label="View B-Study — Visual Identity (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/bstudy3-480.avif 480w, src/assets/img/bstudy3-800.avif 800w, src/assets/img/bstudy3-1200.avif 1200w, src/assets/img/bstudy3-1600.avif 1600w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/bstudy3-480.webp 480w, src/assets/img/bstudy3-800.webp 800w, src/assets/img/bstudy3-1200.webp 1200w, src/assets/img/bstudy3-1600.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/bstudy3-800.jpg" width="1600" height="1600" alt="B-Study — Visual Identity" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="bstudy" data-name="bstudy4" data-category="Social Media" data-title="B-Study — Ready for Round 3">
+            <button class="tile__btn" type="button" aria-label="View B-Study — Ready for Round 3 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/bstudy4-480.avif 480w, src/assets/img/bstudy4-800.avif 800w, src/assets/img/bstudy4-1080.avif 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/bstudy4-480.webp 480w, src/assets/img/bstudy4-800.webp 800w, src/assets/img/bstudy4-1080.webp 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/bstudy4-800.jpg" width="1080" height="1080" alt="B-Study — Ready for Round 3" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Study</span></span>
+            </button>
+          </li>
+          <li class="tile" id="kids" data-group="kids" data-name="w-kids-02" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 01">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 01 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-02-480.avif 480w, src/assets/img/w-kids-02-800.avif 800w, src/assets/img/w-kids-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-02-480.webp 480w, src/assets/img/w-kids-02-800.webp 800w, src/assets/img/w-kids-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-02-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="kids" data-name="w-kids-03" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 02">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 02 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-03-480.avif 480w, src/assets/img/w-kids-03-800.avif 800w, src/assets/img/w-kids-03-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-03-480.webp 480w, src/assets/img/w-kids-03-800.webp 800w, src/assets/img/w-kids-03-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-03-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="kids" data-name="w-kids-05" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 03">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 03 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-05-480.avif 480w, src/assets/img/w-kids-05-800.avif 800w, src/assets/img/w-kids-05-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-05-480.webp 480w, src/assets/img/w-kids-05-800.webp 800w, src/assets/img/w-kids-05-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-05-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="kids" data-name="w-kids-07" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 04">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 04 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-07-480.avif 480w, src/assets/img/w-kids-07-800.avif 800w, src/assets/img/w-kids-07-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-07-480.webp 480w, src/assets/img/w-kids-07-800.webp 800w, src/assets/img/w-kids-07-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-07-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="kids" data-name="w-kids-11" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 05">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 05 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-11-480.avif 480w, src/assets/img/w-kids-11-800.avif 800w, src/assets/img/w-kids-11-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-11-480.webp 480w, src/assets/img/w-kids-11-800.webp 800w, src/assets/img/w-kids-11-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-11-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" data-group="kids" data-name="w-kids-13" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 06">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 06 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-13-480.avif 480w, src/assets/img/w-kids-13-800.avif 800w, src/assets/img/w-kids-13-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-13-480.webp 480w, src/assets/img/w-kids-13-800.webp 800w, src/assets/img/w-kids-13-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-kids-13-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="kids" data-name="w-kids-15" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 07">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 07 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-15-480.avif 480w, src/assets/img/w-kids-15-800.avif 800w, src/assets/img/w-kids-15-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-15-480.webp 480w, src/assets/img/w-kids-15-800.webp 800w, src/assets/img/w-kids-15-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-15-800.jpg" width="1200" height="1200" alt="B-Little Hands — Nursery &amp; Kids Brand — 07" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="kids" data-name="w-kids-16" data-category="Social Media" data-title="B-Little Hands — Nursery &amp; Kids Brand — 08">
+            <button class="tile__btn" type="button" aria-label="View B-Little Hands — Nursery &amp; Kids Brand — 08 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-kids-16-480.avif 480w, src/assets/img/w-kids-16-800.avif 800w, src/assets/img/w-kids-16-1122.avif 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-kids-16-480.webp 480w, src/assets/img/w-kids-16-800.webp 800w, src/assets/img/w-kids-16-1122.webp 1122w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-kids-16-800.jpg" width="1122" height="1402" alt="B-Little Hands — Nursery &amp; Kids Brand — 08" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">B-Little Hands</span></span>
+            </button>
+          </li>
+          <li class="tile" id="realestate" data-group="realestate" data-name="w-realestate-01" data-category="Campaign" data-title="Real Estate Social Media Campaign — 01">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 01 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-01-480.avif 480w, src/assets/img/w-realestate-01-800.avif 800w, src/assets/img/w-realestate-01-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-01-480.webp 480w, src/assets/img/w-realestate-01-800.webp 800w, src/assets/img/w-realestate-01-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-01-800.jpg" width="1200" height="1200" alt="Real Estate Social Media Campaign — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="realestate" data-name="w-realestate-02" data-category="Campaign" data-title="Real Estate Social Media Campaign — 02">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 02 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-02-480.avif 480w, src/assets/img/w-realestate-02-800.avif 800w, src/assets/img/w-realestate-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-02-480.webp 480w, src/assets/img/w-realestate-02-800.webp 800w, src/assets/img/w-realestate-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-02-800.jpg" width="1200" height="1490" alt="Real Estate Social Media Campaign — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="realestate" data-name="w-realestate-03" data-category="Campaign" data-title="Real Estate Social Media Campaign — 03">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 03 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-03-480.avif 480w, src/assets/img/w-realestate-03-800.avif 800w, src/assets/img/w-realestate-03-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-03-480.webp 480w, src/assets/img/w-realestate-03-800.webp 800w, src/assets/img/w-realestate-03-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-03-800.jpg" width="1200" height="1200" alt="Real Estate Social Media Campaign — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="realestate" data-name="w-realestate-04" data-category="Campaign" data-title="Real Estate Social Media Campaign — 04">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 04 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-04-480.avif 480w, src/assets/img/w-realestate-04-800.avif 800w, src/assets/img/w-realestate-04-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-04-480.webp 480w, src/assets/img/w-realestate-04-800.webp 800w, src/assets/img/w-realestate-04-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-04-800.jpg" width="1200" height="1490" alt="Real Estate Social Media Campaign — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="realestate" data-name="w-realestate-05" data-category="Campaign" data-title="Real Estate Social Media Campaign — 05">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 05 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-05-480.avif 480w, src/assets/img/w-realestate-05-800.avif 800w, src/assets/img/w-realestate-05-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-05-480.webp 480w, src/assets/img/w-realestate-05-800.webp 800w, src/assets/img/w-realestate-05-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-05-800.jpg" width="1200" height="1490" alt="Real Estate Social Media Campaign — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="realestate" data-name="w-realestate-06" data-category="Campaign" data-title="Real Estate Social Media Campaign — 06">
+            <button class="tile__btn" type="button" aria-label="View Real Estate Social Media Campaign — 06 (Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-realestate-06-480.avif 480w, src/assets/img/w-realestate-06-800.avif 800w, src/assets/img/w-realestate-06-1031.avif 1031w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-realestate-06-480.webp 480w, src/assets/img/w-realestate-06-800.webp 800w, src/assets/img/w-realestate-06-1031.webp 1031w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-realestate-06-800.jpg" width="1031" height="1280" alt="Real Estate Social Media Campaign — 06" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Campaign</span><span class="tile__title">TMG</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" id="tech" data-group="tech" data-name="w-tech-01" data-category="Social Media" data-title="Tech Retail Social Media Designs — 01">
+            <button class="tile__btn" type="button" aria-label="View Tech Retail Social Media Designs — 01 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-tech-01-480.avif 480w, src/assets/img/w-tech-01-800.avif 800w, src/assets/img/w-tech-01-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/w-tech-01-480.webp 480w, src/assets/img/w-tech-01-800.webp 800w, src/assets/img/w-tech-01-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/w-tech-01-800.jpg" width="1200" height="1200" alt="Tech Retail Social Media Designs — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">Egypt Store</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="tech" data-name="w-tech-02" data-category="Social Media" data-title="Tech Retail Social Media Designs — 02">
+            <button class="tile__btn" type="button" aria-label="View Tech Retail Social Media Designs — 02 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-tech-02-480.avif 480w, src/assets/img/w-tech-02-800.avif 800w, src/assets/img/w-tech-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-tech-02-480.webp 480w, src/assets/img/w-tech-02-800.webp 800w, src/assets/img/w-tech-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-tech-02-800.jpg" width="1200" height="1200" alt="Tech Retail Social Media Designs — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">Egypt Store</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="tech" data-name="w-tech-03" data-category="Social Media" data-title="Tech Retail Social Media Designs — 03">
+            <button class="tile__btn" type="button" aria-label="View Tech Retail Social Media Designs — 03 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-tech-03-480.avif 480w, src/assets/img/w-tech-03-800.avif 800w, src/assets/img/w-tech-03-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-tech-03-480.webp 480w, src/assets/img/w-tech-03-800.webp 800w, src/assets/img/w-tech-03-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-tech-03-800.jpg" width="1200" height="1200" alt="Tech Retail Social Media Designs — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">Egypt Store</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="tech" data-name="w-tech-04" data-category="Social Media" data-title="Tech Retail Social Media Designs — 04">
+            <button class="tile__btn" type="button" aria-label="View Tech Retail Social Media Designs — 04 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-tech-04-480.avif 480w, src/assets/img/w-tech-04-800.avif 800w, src/assets/img/w-tech-04-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-tech-04-480.webp 480w, src/assets/img/w-tech-04-800.webp 800w, src/assets/img/w-tech-04-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-tech-04-800.jpg" width="1200" height="1200" alt="Tech Retail Social Media Designs — 04" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">Egypt Store</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="tech" data-name="w-tech-05" data-category="Social Media" data-title="Tech Retail Social Media Designs — 05">
+            <button class="tile__btn" type="button" aria-label="View Tech Retail Social Media Designs — 05 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-tech-05-480.avif 480w, src/assets/img/w-tech-05-800.avif 800w, src/assets/img/w-tech-05-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-tech-05-480.webp 480w, src/assets/img/w-tech-05-800.webp 800w, src/assets/img/w-tech-05-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-tech-05-800.jpg" width="1200" height="1200" alt="Tech Retail Social Media Designs — 05" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">Egypt Store</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" id="food" data-group="food" data-name="w-food-01" data-category="Social Media" data-title="Food &amp; Restaurant Social Media Designs — 01">
+            <button class="tile__btn" type="button" aria-label="View Food &amp; Restaurant Social Media Designs — 01 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-food-01-480.avif 480w, src/assets/img/w-food-01-800.avif 800w, src/assets/img/w-food-01-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-food-01-480.webp 480w, src/assets/img/w-food-01-800.webp 800w, src/assets/img/w-food-01-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-food-01-800.jpg" width="1200" height="1200" alt="Food &amp; Restaurant Social Media Designs — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">The Crepery &amp; Best Juice</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="food" data-name="w-food-02" data-category="Social Media" data-title="Food &amp; Restaurant Social Media Designs — 02">
+            <button class="tile__btn" type="button" aria-label="View Food &amp; Restaurant Social Media Designs — 02 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-food-02-480.avif 480w, src/assets/img/w-food-02-800.avif 800w, src/assets/img/w-food-02-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-food-02-480.webp 480w, src/assets/img/w-food-02-800.webp 800w, src/assets/img/w-food-02-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-food-02-800.jpg" width="1200" height="1200" alt="Food &amp; Restaurant Social Media Designs — 02" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">The Crepery &amp; Best Juice</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="food" data-name="w-food-03" data-category="Social Media" data-title="Food &amp; Restaurant Social Media Designs — 03">
+            <button class="tile__btn" type="button" aria-label="View Food &amp; Restaurant Social Media Designs — 03 (Social Media)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-food-03-480.avif 480w, src/assets/img/w-food-03-800.avif 800w, src/assets/img/w-food-03-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-food-03-480.webp 480w, src/assets/img/w-food-03-800.webp 800w, src/assets/img/w-food-03-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-food-03-800.jpg" width="1200" height="1200" alt="Food &amp; Restaurant Social Media Designs — 03" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Social Media</span><span class="tile__title">The Crepery &amp; Best Juice</span></span>
+            </button>
+          </li>
+          <li class="tile" id="eid" data-group="eid" data-name="w-eid-01" data-category="Seasonal Campaign" data-title="Eid Al-Adha Social Media Campaign — B2B — 01">
+            <button class="tile__btn" type="button" aria-label="View Eid Al-Adha Social Media Campaign — B2B — 01 (Seasonal Campaign)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/w-eid-01-480.avif 480w, src/assets/img/w-eid-01-800.avif 800w, src/assets/img/w-eid-01-1200.avif 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/w-eid-01-480.webp 480w, src/assets/img/w-eid-01-800.webp 800w, src/assets/img/w-eid-01-1200.webp 1200w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/w-eid-01-800.jpg" width="1200" height="1600" alt="Eid Al-Adha Social Media Campaign — B2B — 01" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Seasonal Campaign</span><span class="tile__title">Miramar Logistics</span></span>
+            </button>
+          </li>
+          <li class="tile tile--wide" id="mawhiba" data-group="mawhiba" data-name="smart1" data-category="Brand Identity" data-title="Mawhiba+ — Key Visual">
+            <button class="tile__btn" type="button" aria-label="View Mawhiba+ — Key Visual (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/smart1-480.avif 480w, src/assets/img/smart1-800.avif 800w, src/assets/img/smart1-1024.avif 1024w" sizes="(min-width: 900px) 50vw, 100vw">
+                <source type="image/webp" srcset="src/assets/img/smart1-480.webp 480w, src/assets/img/smart1-800.webp 800w, src/assets/img/smart1-1024.webp 1024w" sizes="(min-width: 900px) 50vw, 100vw">
+                <img src="src/assets/img/smart1-800.jpg" width="1024" height="1024" alt="Mawhiba+ — Key Visual" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">Mawhiba+</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="mawhiba" data-name="smart2" data-category="Brand Identity" data-title="Mawhiba+ — Tiny Hands, Big Dreams">
+            <button class="tile__btn" type="button" aria-label="View Mawhiba+ — Tiny Hands, Big Dreams (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/smart2-480.avif 480w, src/assets/img/smart2-800.avif 800w, src/assets/img/smart2-1024.avif 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/smart2-480.webp 480w, src/assets/img/smart2-800.webp 800w, src/assets/img/smart2-1024.webp 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/smart2-800.jpg" width="1024" height="1024" alt="Mawhiba+ — Tiny Hands, Big Dreams" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">Mawhiba+</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="mawhiba" data-name="smart3" data-category="Brand Identity" data-title="Mawhiba+ — Learning Made Fun">
+            <button class="tile__btn" type="button" aria-label="View Mawhiba+ — Learning Made Fun (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/smart3-480.avif 480w, src/assets/img/smart3-800.avif 800w, src/assets/img/smart3-1024.avif 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/smart3-480.webp 480w, src/assets/img/smart3-800.webp 800w, src/assets/img/smart3-1024.webp 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/smart3-800.jpg" width="1024" height="1024" alt="Mawhiba+ — Learning Made Fun" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">Mawhiba+</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="mawhiba" data-name="smart4" data-category="Brand Identity" data-title="Mawhiba+ — Every Small Step">
+            <button class="tile__btn" type="button" aria-label="View Mawhiba+ — Every Small Step (Brand Identity)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/smart4-480.avif 480w, src/assets/img/smart4-800.avif 800w, src/assets/img/smart4-1024.avif 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/smart4-480.webp 480w, src/assets/img/smart4-800.webp 800w, src/assets/img/smart4-1024.webp 1024w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/smart4-800.jpg" width="1024" height="1024" alt="Mawhiba+ — Every Small Step" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Brand Identity</span><span class="tile__title">Mawhiba+</span></span>
+            </button>
+          </li>
+          <li class="tile" id="training" data-group="training" data-name="training1" data-category="Print &amp; Promo" data-title="Training Courses — Cover">
+            <button class="tile__btn" type="button" aria-label="View Training Courses — Cover (Print &amp; Promo)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/training1-480.avif 480w, src/assets/img/training1-800.avif 800w, src/assets/img/training1-1080.avif 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/training1-480.webp 480w, src/assets/img/training1-800.webp 800w, src/assets/img/training1-1080.webp 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/training1-800.jpg" width="1080" height="1080" alt="Training Courses — Cover" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Print &amp; Promo</span><span class="tile__title">Continuing Education Academy</span></span>
+            </button>
+          </li>
+          <li class="tile tile--tall" data-group="training" data-name="training2" data-category="Print &amp; Promo" data-title="Training Courses — Brochure">
+            <button class="tile__btn" type="button" aria-label="View Training Courses — Brochure (Print &amp; Promo)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/training2-480.avif 480w, src/assets/img/training2-800.avif 800w, src/assets/img/training2-1080.avif 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/training2-480.webp 480w, src/assets/img/training2-800.webp 800w, src/assets/img/training2-1080.webp 1080w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/training2-800.jpg" width="1080" height="1080" alt="Training Courses — Brochure" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Print &amp; Promo</span><span class="tile__title">Continuing Education Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="training" data-name="training3" data-category="Print &amp; Promo" data-title="Training Courses — Layout">
+            <button class="tile__btn" type="button" aria-label="View Training Courses — Layout (Print &amp; Promo)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/training3-480.avif 480w, src/assets/img/training3-800.avif 800w, src/assets/img/training3-1097.avif 1097w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/training3-480.webp 480w, src/assets/img/training3-800.webp 800w, src/assets/img/training3-1097.webp 1097w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/training3-800.jpg" width="1097" height="1080" alt="Training Courses — Layout" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Print &amp; Promo</span><span class="tile__title">Continuing Education Academy</span></span>
+            </button>
+          </li>
+          <li class="tile" data-group="training" data-name="training4" data-category="Print &amp; Promo" data-title="Training Courses — Feature Spread">
+            <button class="tile__btn" type="button" aria-label="View Training Courses — Feature Spread (Print &amp; Promo)">
+              <picture>
+                <source type="image/avif" srcset="src/assets/img/training4-480.avif 480w, src/assets/img/training4-800.avif 800w, src/assets/img/training4-1200.avif 1200w, src/assets/img/training4-1600.avif 1600w" sizes="(min-width: 900px) 25vw, 50vw">
+                <source type="image/webp" srcset="src/assets/img/training4-480.webp 480w, src/assets/img/training4-800.webp 800w, src/assets/img/training4-1200.webp 1200w, src/assets/img/training4-1600.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw">
+                <img src="src/assets/img/training4-800.jpg" width="1600" height="1600" alt="Training Courses — Feature Spread" loading="lazy" decoding="async">
+              </picture>
+              <span class="tile__overlay" aria-hidden="true"><span class="tile__cat">Print &amp; Promo</span><span class="tile__title">Continuing Education Academy</span></span>
+            </button>
+          </li>
+          <!-- /gen:tiles -->
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Badr Mohamed Masoud. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="fab-whatsapp" href="https://wa.me/201286204412" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c.3 2.3 2.2 4.2 4.5 4.5l1-1.2 2 1-.4 1.4c-3.8.3-7.3-3.2-7-7l1.4-.4 1 2z"/></svg>
+    <span>WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></span>
+  </a>
+
+  <!-- Lightbox (native modal dialog: focus trap, Escape and inert background built in) -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox__stage" id="lightbox-stage">
+      <img class="lightbox__img" id="lightbox-img" src="data:," alt="" draggable="false">
+    </div>
+    <div class="lightbox__bar">
+      <p class="lightbox__info">
+        <span class="lightbox__cat" id="lightbox-cat"></span>
+        <span class="lightbox__title" id="lightbox-title"></span>
+      </p>
+      <p class="lightbox__counter" id="lightbox-counter" aria-live="polite"></p>
+      <p class="lightbox__hint">Scroll or pinch to zoom · drag to pan</p>
+    </div>
+    <button class="lightbox__btn lightbox__close" id="lightbox-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__prev" id="lightbox-prev" type="button" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__next" id="lightbox-next" type="button" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </dialog>
+
+  <script type="module" src="/src/scripts/gallery-page.js"></script>
 </body>
 </html>
