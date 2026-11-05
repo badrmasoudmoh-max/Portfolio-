@@ -112,6 +112,33 @@
   transform: scaleX(1);
 }
 
+/* CV download: a small outlined pill so it reads as an action, not a section */
+.site-nav__list .site-nav__cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-block: calc(var(--sp-2) * -0.5);
+  padding: 0.45em 0.9em;
+  border: 1.5px solid var(--lime);
+  border-radius: 999px;
+  color: var(--lime);
+}
+
+.site-nav__cv svg {
+  width: 1.05em;
+  height: 1.05em;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.site-nav__list .site-nav__cv::after { display: none; }
+
+.site-nav__list .site-nav__cv:hover {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.site-nav__cv:hover svg { transform: translateY(2px); }
+
 .menu-toggle {
   display: none;
 }
@@ -225,5 +252,17 @@
 
   body.nav-open {
     overflow: hidden;
+  }
+}
+
+/* Mobile panel: keep the CV pill a compact action under the big display links */
+@media (max-width: 899px) {
+  .js .site-nav__list .site-nav__cv {
+    margin-top: var(--sp-4);
+    padding: 0.85em 1.5em;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
   }
 }
