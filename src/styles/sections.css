@@ -224,6 +224,15 @@
 
 .cv-card__alt:hover { color: var(--lime); }
 
+.cv-card__alts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px 8px;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
 @media (max-width: 599px) {
   .cv-card { grid-template-columns: auto 1fr; }
   .cv-card__actions { grid-column: 1 / -1; justify-items: stretch; text-align: center; }
